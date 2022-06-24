@@ -1,5 +1,4 @@
 # include <stdio.h>
-# include <stdbool.h>
 # include "circular_linked_list.h"
 
 void	list_init(list *plist)
@@ -68,8 +67,23 @@ bool	list_next(list *plist, t_data *pdata)
 
 t_data	list_remove(list *plist)
 {
-	// plist->before->next = plist->cur->next;
-	// free(plist->cur);
+	t_node	*rpos;
+	t_data	rdata;
+
+	rpos = plist->cur;
+	rdata = rpos->data;
+	if (rpos == plist->tail)
+	{
+		if (plist->tail == plist->tail->next)
+			plist->tail = NULL;
+		else
+			plist->tail = plist->before;		
+	}
+	plist->before->next = plist->cur->next;
+	plist->cur = plist->before;
+	free(rpos);
+	(plist->num_of_data)--;
+	return (rdata);
 }
 
 int		list_count(list *plist)

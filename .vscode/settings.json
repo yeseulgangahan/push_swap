@@ -1,5 +1,9 @@
 {
 	"files.associations": {
-		"libft.h": "c"
+		"libft.h": "c",
+		"pushswap_stack.h": "c",
+		"circular_linked_list.h": "c",
+		"pushswap_operations.h": "c",
+		"push_swap_stack.h": "c"
 	}
 }

@@ -1,4 +1,3 @@
-
 void	free_twoarr(char **arr)
 {
 	size_t	i;
@@ -11,4 +10,3 @@ void	free_twoarr(char **arr)
 	}
 	free(arr);
 }
-

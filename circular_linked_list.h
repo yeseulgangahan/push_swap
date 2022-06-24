@@ -1,6 +1,8 @@
 #ifndef CIRCULAR_LINKED_LIST_H
 # define CIRCULAR_LINKED_LIST_H
 
+# include <stdbool.h>
+
 typedef int	t_data;
 
 typedef struct	s_node

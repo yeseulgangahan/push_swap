@@ -59,28 +59,25 @@ int	get_valid_number(t_list **list, char *str)
 	return (num);
 }
 
-void	get_arguments(t_list **list, char **argv)
+t_list	*get_arguments(char **argv)
 {
 	int		i;
 	int		j;
 	char	**temp;
+	t_list *list;
 
 	i = 1;
 	while (argv[i])
 	{
-		if (ft_strchr(argv[i], ' ') == NULL)
-			list_insert(list, get_valid_number(list, argv[i]));			
-		else
+		temp = ft_split(argv[i], ' ');
+		j = 0;
+		while (temp[j])
 		{
-			temp = ft_split(argv[i], ' ');
-			j = 0;
-			while (temp[j])
-			{
-				list_insert(list, get_valid_number(list, temp[j]));
-				j++;
-			}
-			free_twoarr(temp);
+			list_insert_back(list, get_valid_number(list, temp[j]));
+			j++;
 		}
+		free_twoarr(temp);
 		i++;
 	}
+	return (list);
 }
