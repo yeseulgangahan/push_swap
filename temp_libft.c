@@ -1,6 +1,8 @@
+# include <stdlib.h>
+
 void	free_twoarr(char **arr)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (arr[i])

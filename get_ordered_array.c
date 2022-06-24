@@ -3,17 +3,19 @@
 static void	get_array(t_list *plist, int *arr)
 {
 	int		i;
-	t_data	*pdata;
+	t_data	data;
+	int		list_len;
 
 	i = 0;
-	if (list_first(plist, pdata))
+	if (list_first(plist, &data) == true)
 	{
-		arr[i] = pdata;
+		arr[i] = data;
 		i++;
-		while (list_next(plist, pdata))
+		list_len = list_count(plist);
+		while (i < list_len)
 		{
-			list_next(plist, pdata);
-			arr[i] = pdata;
+			list_next(plist, &data);
+			arr[i] = data;
 			i++;
 		}
 	}
@@ -22,7 +24,12 @@ static void	get_array(t_list *plist, int *arr)
 
 static void	sort_array(int *arr)
 {
-	//
+	int i = 0;
+	while (i < 10)
+	{
+		arr[i] = i;
+		i++;
+	}
 }
 
 int	*get_ordered_array(t_list *plist)

@@ -1,47 +1,50 @@
+# include <stdlib.h>
 # include "push_swap_stack.h"
 
-void	stack_init(stack *pstack)
+void	stack_init(t_stack *pstack)
 {
-	pstack->plist = malloc(sizeof(list));
-	list_init(pstack->plist);
+	pstack = malloc(sizeof(t_list));
+	list_init(pstack);
 }
 
-int	stack_count(stack *pstack)
+int	stack_count(t_stack *pstack)
 {
-	return (list_count(pstack->plist));
+	return (list_count(pstack));
 }
 
-voidstack_push(stack *pstack1, stack *pstack2)
+void	stack_push(t_stack *pstack1, t_stack *pstack2)
 {
 	t_data	*pdata;
 
+	pdata = NULL;
 	if (stack_count(pstack1) == 0)
 		return ;
-	list_first(pstack1->plist, pdata);
-	list_remove(pstack1->plist->cur);
-	list_insert_front(pstack2->plist, *pdata);
+	list_first(pstack1, pdata);
+	list_remove(pstack1);
+	list_insert_front(pstack2, *pdata);
 }
 
-void	stack_swap(stack *pstack)
+void	stack_swap(t_stack *pstack)
 {
 	t_data	*pdata;
 
+	pdata = NULL;
 	if (stack_count(pstack) < 2)
 		return ;
-	list_first(pstack->plist, pdata);
-	list_next(pstack->plist, pdata);
-	pstack->plist->cur->data = pstack->plist->before->data;
-	pstack->plist->before->data = pdata;
+	list_first(pstack, pdata);
+	list_next(pstack, pdata);
+	pstack->cur->data = pstack->before->data;
+	pstack->before->data = *pdata;
 }
 
-void	stack_rotate(stack *pstack, int n)
+void	stack_rotate(t_stack *pstack, int n)
 {
 	int	i;
 
 	i = 0;
 	while (i < n)
 	{
-		pstack->plist->tail = pstack->plist->tail->next;
+		pstack->tail = pstack->tail->next;
 		i++;
 	}
 }

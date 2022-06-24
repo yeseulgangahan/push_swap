@@ -1,4 +1,5 @@
 # include <stdio.h>
+# include <stdlib.h>
 # include "circular_linked_list.h"
 
 void	list_init(t_list *plist)
@@ -11,8 +12,9 @@ void	list_init(t_list *plist)
 
 void	list_insert_back(t_list *plist, t_data data)
 {
-	t_node	*newnode = malloc(sizeof(t_node));
-
+	t_node	*newnode;
+	
+	newnode = malloc(sizeof(t_node));
 	newnode->data = data;
 	if (plist->tail == NULL)
 	{

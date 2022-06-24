@@ -3,15 +3,17 @@
 
 # include "push_swap_stack.h"
 
-void	sa(stack *pstack);
-void	sb(stack *pstack);
-void	pa(stack *pstack1, stack *pstack2);
-void	pb(stack *pstack1, stack *pstack2);
-void	ra(stack *pstack);
-void	rb(stack *pstack);
-void	rr(stack *pstack1, stack *pstack2);
-void	rra(stack *pstack);
-void	rrb(stack *pstack);
-void	rrr(stack *pstack1, stack *pstack2);
+typedef t_list	t_stack; /* 임시 */
+
+void	sa(t_stack *pstack);
+void	sb(t_stack *pstack);
+void	pa(t_stack *pstack1, t_stack *pstack2);
+void	pb(t_stack *pstack1, t_stack *pstack2);
+void	ra(t_stack *pstack);
+void	rb(t_stack *pstack);
+void	rr(t_stack *pstack1, t_stack *pstack2);
+void	rra(t_stack *pstack);
+void	rrb(t_stack *pstack);
+void	rrr(t_stack *pstack1, t_stack *pstack2);
 
 #endif

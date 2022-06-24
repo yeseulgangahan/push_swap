@@ -1,7 +1,7 @@
 NAME		:= push_swap
 
 CC			:= cc
-CFLAGS		:= -Wall -Wextra -Werror
+CFLAGS		:= -Wall -Wextra -Werror -g
 RM			:= rm -f
 
 LIBFLAGS	:= -L./libft -lft
@@ -9,8 +9,13 @@ LIBFLAGS	:= -L./libft -lft
 FTDIR		:= ./libft
 
 SRCS	:= \
+				circular_linked_list.c \
+				push_swap_stack.c \
+				push_swap_operations.c \
 				main.c \
-				get_arguments.c
+				get_valid_list.c \
+				get_ordered_array.c \
+				temp_libft.c
 
 # SRCS_BONUS	:= \
 				main_bonus.c \

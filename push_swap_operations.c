@@ -1,62 +1,63 @@
+# include <stdio.h> /* 임시. ft_printf 넣어야 함 */
 # include "push_swap_operations.h"
-# include "../libft/include/libft.h"
+// # include "./libft/include/libft.h"
 
-void	sa(stack *pstack)
+void	sa(t_stack *pstack)
 {
 	stack_swap(pstack);
-	ft_printf("sa\n");
+	printf("sa\n");
 }
 
-void	sb(stack *pstack)
+void	sb(t_stack *pstack)
 {
 	stack_swap(pstack);
-	ft_printf("sb\n");
+	printf("sb\n");
 }
 
-void	pa(stack *pstack1, stack *pstack2)
+void	pa(t_stack *pstack1, t_stack *pstack2)
 {
 	stack_push(pstack1, pstack2);
-	ft_printf("pa\n");
+	printf("pa\n");
 }
 
-void	pb(stack *pstack1, stack *pstack2)
+void	pb(t_stack *pstack1, t_stack *pstack2)
 {
 	stack_push(pstack1, pstack2);
-	ft_printf("pb\n");
+	printf("pb\n");
 }
 
-void	ra(stack *pstack)
+void	ra(t_stack *pstack)
 {
 	stack_rotate(pstack, 1);
-	ft_printf("ra\n");
+	printf("ra\n");
 }
-void	rb(stack *pstack)
+void	rb(t_stack *pstack)
 {
 	stack_rotate(pstack, 1);
-	ft_printf("rb\n");
+	printf("rb\n");
 }
 
-void	rr(stack *pstack1, stack *pstack2)
+void	rr(t_stack *pstack1, t_stack *pstack2)
 {
 	ra(pstack1);
 	rb(pstack2);
-	ft_printf("rr\n");
+	printf("rr\n");
 }
 
-void	rra(stack *pstack)
+void	rra(t_stack *pstack)
 {
 	stack_rotate(pstack, stack_count(pstack) - 1);
-	ft_printf("rra\n");
+	printf("rra\n");
 }
 
-void	rrb(stack *pstack)
+void	rrb(t_stack *pstack)
 {
 	stack_rotate(pstack, stack_count(pstack) - 1);
-	ft_printf("rrb\n");
+	printf("rrb\n");
 }
-void	rrr(stack *pstack1, stack *pstack2)
+void	rrr(t_stack *pstack1, t_stack *pstack2)
 {
 	rra(pstack1);
 	rrb(pstack2);
-	ft_printf("rrr\n");
+	printf("rrr\n");
 }
