@@ -4,6 +4,10 @@
 		"pushswap_stack.h": "c",
 		"circular_linked_list.h": "c",
 		"pushswap_operations.h": "c",
-		"push_swap_stack.h": "c"
+		"push_swap_stack.h": "c",
+		"stdio.h": "c",
+		"push_swap.h": "c",
+		"stdbool.h": "c",
+		"push_swap_operations.h": "c"
 	}
 }

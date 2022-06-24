@@ -1,7 +1,7 @@
 # include <stdio.h>
 # include "circular_linked_list.h"
 
-void	list_init(list *plist)
+void	list_init(t_list *plist)
 {
 	plist->tail = NULL;
 	plist->before = NULL;
@@ -9,7 +9,7 @@ void	list_init(list *plist)
 	plist->num_of_data = 0;
 }
 
-void	list_insert_back(list *plist, t_data data)
+void	list_insert_back(t_list *plist, t_data data)
 {
 	t_node	*newnode = malloc(sizeof(t_node));
 
@@ -28,7 +28,7 @@ void	list_insert_back(list *plist, t_data data)
 	(plist->num_of_data)++;
 }
 
-void	list_insert_front(list *plist, t_data data)
+void	list_insert_front(t_list *plist, t_data data)
 {
 	t_node	*newnode = malloc(sizeof(t_node));
 
@@ -46,7 +46,7 @@ void	list_insert_front(list *plist, t_data data)
 	(plist->num_of_data)++;
 }
 
-bool	list_first(list *plist, t_data *pdata)
+bool	list_first(t_list *plist, t_data *pdata)
 {
 	if (plist->tail == NULL)
 		return (false);
@@ -55,7 +55,7 @@ bool	list_first(list *plist, t_data *pdata)
 	*pdata = plist->cur->data;
 	return (true);
 }
-bool	list_next(list *plist, t_data *pdata)
+bool	list_next(t_list *plist, t_data *pdata)
 {
 	if (plist->tail == NULL)
 		return (false);
@@ -65,7 +65,7 @@ bool	list_next(list *plist, t_data *pdata)
 	return (true);
 }
 
-t_data	list_remove(list *plist)
+t_data	list_remove(t_list *plist)
 {
 	t_node	*rpos;
 	t_data	rdata;
@@ -86,7 +86,7 @@ t_data	list_remove(list *plist)
 	return (rdata);
 }
 
-int		list_count(list *plist)
+int		list_count(t_list *plist)
 {
 	return (plist->num_of_data);
 }

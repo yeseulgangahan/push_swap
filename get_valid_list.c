@@ -1,7 +1,6 @@
-# include "../libft/include/libft.h"
-# include "circular_linked_list.h"
+# include "push_swap.h"
 
-int	ft_atoi_strict(const char *str)
+static int	ft_atoi_strict(const char *str)
 {
 	int			neg;
 	size_t		num;
@@ -29,7 +28,7 @@ int	ft_atoi_strict(const char *str)
 	return (neg * num);
 }
 
-bool	is_unique_number(t_list *list, int num)
+static bool	is_unique_number(t_list *list, int num)
 {
 	t_data	list_num;
 
@@ -49,7 +48,7 @@ bool	is_unique_number(t_list *list, int num)
 	return (true);
 }
 
-int	get_valid_number(t_list **list, char *str)
+static int	get_valid_number(t_list **list, char *str)
 {
 	int num;
 
@@ -59,7 +58,7 @@ int	get_valid_number(t_list **list, char *str)
 	return (num);
 }
 
-t_list	*get_arguments(char **argv)
+t_list	*get_valid_list(char **argv)
 {
 	int		i;
 	int		j;

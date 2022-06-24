@@ -1,5 +1,5 @@
-#ifndef PUSHSWAP_OPERATIONS_H
-# define PUSHSWAP_OPERATIONS_H
+#ifndef PUSH_SWAP_OPERATIONS_H
+# define PUSH_SWAP_OPERATIONS_H
 
 # include "push_swap_stack.h"
 

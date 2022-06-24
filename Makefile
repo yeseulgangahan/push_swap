@@ -10,6 +10,7 @@ FTDIR		:= ./libft
 
 SRCS	:= \
 				main.c \
+				get_arguments.c
 
 # SRCS_BONUS	:= \
 				main_bonus.c \

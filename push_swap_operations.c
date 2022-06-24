@@ -1,5 +1,5 @@
-# include "pushswap_operations.h"
-# include "libft.h"
+# include "push_swap_operations.h"
+# include "../libft/include/libft.h"
 
 void	sa(stack *pstack)
 {

@@ -19,14 +19,14 @@ typedef struct	s_clinkedlist
 	int		num_of_data;
 } 	t_clinkedlist;
 
-typedef t_clinkedlist	list;
+typedef t_clinkedlist	t_list;
 
-void	list_init(list *plist);
-void	list_insert_back(list *plist, t_data data);
-void	list_insert_front(list *plist, t_data data);
-bool	list_first(list *plist, t_data *data);
-bool	list_next(list *plist, t_data *pdata);
-t_data	list_remove(list *plist);
-int		list_count(list *plist);
+void	list_init(t_list *plist);
+void	list_insert_back(t_list *plist, t_data data);
+void	list_insert_front(t_list *plist, t_data data);
+bool	list_first(t_list *plist, t_data *data);
+bool	list_next(t_list *plist, t_data *pdata);
+t_data	list_remove(t_list *plist);
+int		list_count(t_list *plist);
 
 #endif

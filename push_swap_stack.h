@@ -5,7 +5,7 @@
 
 typedef struct s_liststack
 {
-	list	*plist;
+	t_list	*plist;
 }	t_liststack;
 
 typedef t_liststack	stack;
