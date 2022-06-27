@@ -1,6 +1,6 @@
 # include "push_swap.h"
 
-static void	get_array(t_clist *plist, int *arr)
+static void	get_arr(t_clist *plist, int *arr)
 {
 	int		i;
 	t_data	data;
@@ -22,7 +22,7 @@ static void	get_array(t_clist *plist, int *arr)
 	arr[i] = 0;
 }
 
-static void	sort_array(int *arr)
+static void	sort_arr(int *arr)
 {
 	int i = 0;
 	while (i < 10)
@@ -32,12 +32,12 @@ static void	sort_array(int *arr)
 	}
 }
 
-int	*get_ordered_array(t_clist *plist)
+int	*get_ordered_arr(t_clist *plist)
 {
 	int	*arr;
 
 	arr = malloc((sizeof(int) * clist_count(plist)) + 1);
-	get_array(plist, arr);
-	sort_array(arr);
+	get_arr(plist, arr);
+	sort_arr(arr);
 	return (arr);
 }

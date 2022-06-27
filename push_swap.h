@@ -10,10 +10,10 @@ typedef struct	s_pushswap
 {
 	t_stack	*stack_a;
 	t_stack *stack_b;
-	int		*ordered_array;
+	int		*ordered_arr;
 }	t_pushswap;
 
 t_clist	*get_valid_list(char **args);
-int		*get_ordered_array(t_clist *plist);
+int		*get_ordered_arr(t_clist *plist);
 
 #endif
