@@ -1,0 +1,13 @@
+{
+	"files.associations": {
+		"libft.h": "c",
+		"pushswap_stack.h": "c",
+		"pushswap_operations.h": "c",
+		"push_swap_stack.h": "c",
+		"stdio.h": "c",
+		"push_swap.h": "c",
+		"stdbool.h": "c",
+		"push_swap_operations.h": "c"
+	},
+	"C_Cpp.dimInactiveRegions": true
+}
