@@ -7,7 +7,13 @@
 		"stdio.h": "c",
 		"push_swap.h": "c",
 		"stdbool.h": "c",
-		"push_swap_operations.h": "c"
+		"push_swap_operations.h": "c",
+		"circular_linked_list.h": "c",
+		"array": "c",
+		"iterator": "c",
+		"string": "c",
+		"string_view": "c",
+		"vector": "c"
 	},
 	"C_Cpp.dimInactiveRegions": true
 }

@@ -86,7 +86,7 @@ t_clist	*get_valid_list(char **args)
 				clist_insert_back(plist, get_valid_number(plist, temp[j]));
 				j++;
 			}
-			free_twoarr(temp);
+			ft_free_twoarr(temp);
 		}
 		i++;
 	}

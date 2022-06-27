@@ -3,7 +3,7 @@
 
 void	stack_init(t_stack *pstack)
 {
-	pstack = malloc(sizeof(t_stack));
+	pstack = ft_calloc(sizeof(t_stack));
 	clist_init(pstack);
 }
 
@@ -19,17 +19,17 @@ t_data	stack_peek(t_stack *pstack)
 
 bool	stack_is_ascending_order(t_stack *pstack, size_t len)
 {
-	t_data	*pdata;
+	t_data	data;
 	size_t	i;
 
 	if (len > 1)
 	{
-		clist_first(pstack, pdata);
+		clist_first(pstack, &data);
 		i = 0;
 		while (i < len)
 		{
-			clist_next(pstack, pdata);
-			if (pstack->before->data > pdata)
+			clist_next(pstack, &data);
+			if (pstack->before->data > data)
 				return (false);
 			i++;
 		}
@@ -39,17 +39,17 @@ bool	stack_is_ascending_order(t_stack *pstack, size_t len)
 
 bool	stack_is_descending_order(t_stack *pstack, size_t len)
 {
-	t_data	*pdata;
+	t_data	data;
 	size_t	i;
 
 	if (len > 1)
 	{
-		clist_first(pstack, pdata);
+		clist_first(pstack, &data);
 		i = 0;
 		while (i < len)
 		{
-			clist_next(pstack, pdata);
-			if (pstack->before->data < pdata)
+			clist_next(pstack, &data);
+			if (pstack->before->data < data)
 				return (false);
 			i++;
 		}
