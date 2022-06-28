@@ -25,7 +25,6 @@ static void	base_case_solve(t_pushswap *pushswap, size_t len)
 	}
 }
 
-
 static void	chuck_move_to_top(t_pushswap *pushswap, size_t left, size_t pivot1, size_t pivot2)
 {
 	size_t	chuck_len_stack_a;

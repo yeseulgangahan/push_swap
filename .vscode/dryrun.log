@@ -1,15 +1,17 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/yehan/push_swap'
 gcc -Wall -Wextra -Werror -g   -c -o push_swap_stack.o push_swap_stack.c
+ 
 gcc -Wall -Wextra -Werror -g   -c -o push_swap_operations.o push_swap_operations.c
 gcc -Wall -Wextra -Werror -g   -c -o main.o main.c
 gcc -Wall -Wextra -Werror -g   -c -o get_valid_list.o get_valid_list.c
 gcc -Wall -Wextra -Werror -g   -c -o get_ordered_arr.o get_ordered_arr.c
 gcc -Wall -Wextra -Werror -g   -c -o partition_recursive.o partition_recursive.c
 gcc -Wall -Wextra -Werror -g   -c -o partition_recursive2.o partition_recursive2.c
-gcc -Wall -Wextra -Werror -g   -c -o sort_last_n.o sort_last_n.c
+gcc -Wall -Wextra -Werror -g   -c -o sort_less_args.o sort_less_args.c
+ 
 gcc -Wall -Wextra -Werror -g   -c -o test_func.o test_func.c
 make --directory=./libft
-gcc -Wall -Wextra -Werror -g -L./libft -lft push_swap_stack.o push_swap_operations.o main.o get_valid_list.o get_ordered_arr.o partition_recursive.o partition_recursive2.o sort_last_n.o test_func.o -o push_swap
+gcc -Wall -Wextra -Werror -g -L./libft -lft push_swap_stack.o push_swap_operations.o main.o get_valid_list.o get_ordered_arr.o partition_recursive.o partition_recursive2.o sort_less_args.o test_func.o -o push_swap
 make: Leaving directory `/Users/yehan/push_swap'
  

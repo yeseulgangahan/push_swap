@@ -1,14 +1,5 @@
 # include "push_swap.h"
 
-//길지 않으면 a, b 공용으로 만들기
-void	sort_last_two(t_stack *pstack, int stack)
-{
-	if (stack == A)
-		sa(pstack);
-	else if (stack == B)
-		sb(pstack);
-}
-
 static void	sort_3_args(t_stack *pstack)
 {
 	t_data	a1;
@@ -85,7 +76,7 @@ static void	min_data_pop(t_pushswap *pushswap, size_t len, size_t index)
 	pb(pushswap->stack_a, pushswap->stack_b);
 }
 
-void	sort_small_args(t_pushswap *pushswap, size_t len)
+void	sort_less_args(t_pushswap *pushswap, size_t len)
 {
 	if (stack_is_ascending_order(pushswap->stack_a, len) == true)
 		return ;

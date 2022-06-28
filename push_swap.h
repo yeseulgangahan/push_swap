@@ -23,7 +23,7 @@ void	partition_recursive_stack_a(t_pushswap *pushswap, size_t left, size_t right
 void	partition_recursive_stack_b(t_pushswap *pushswap, size_t left, size_t right);
 
 void	sort_last_two(t_stack *pstack, int stack);
-void	sort_small_args(t_pushswap *pushswap, size_t len);
+void	sort_less_args(t_pushswap *pushswap, size_t len);
 
 void	test_print_arr(t_data *arr);
 void	test_print_stack_a(t_stack *pstack);
