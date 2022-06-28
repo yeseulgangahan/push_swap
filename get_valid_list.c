@@ -63,32 +63,28 @@ static int	get_valid_number(t_clist *list, char *str)
 	return (num);
 }
 
-t_clist	*get_valid_list(char **args)
+void	get_valid_stack_a(t_stack *pstack, char **args)
 {
 	int		i;
 	int		j;
 	char	**temp;
-	t_clist *plist;
 
-	plist = ft_calloc(1, sizeof(t_clist));
-	clist_init(plist);
 	i = 1;
 	while (args[i])
 	{
 		if (ft_strchr(args[i], ' ') == NULL)
-			clist_insert_back(plist, get_valid_number(plist, args[i]));
+			clist_insert_back(pstack, get_valid_number(pstack, args[i]));
 		else
 		{
 			temp = ft_split(args[i], ' ');
 			j = 0;
 			while (temp[j])
 			{
-				clist_insert_back(plist, get_valid_number(plist, temp[j]));
+				clist_insert_back(pstack, get_valid_number(pstack, temp[j]));
 				j++;
 			}
 			ft_free_twoarr(temp);
 		}
 		i++;
 	}
-	return (plist);
 }

@@ -6,16 +6,17 @@ static void	base_case_solve(t_pushswap *pushswap, size_t len)
 {
 	size_t	i;
 
-	if (stack_is_descending_order(pushswap->stack_b, len) == true)
-		return ;
-	else if (len == 2)
-		sort_last_two(pushswap->stack_b, B);
-	// else if (len == 3)
-	// 	sort_last_three(pushswap->stack_a, pushswap->stack_b);
-	// else if (len == 4)
-	// 	sort_last_four(pushswap->stack_a, pushswap->stack_b);
-	// else if (len == 5)
-	// 	sort_last_five(pushswap->stack_a, pushswap->stack_b);
+	if (stack_is_descending_order(pushswap->stack_b, len) == false)
+	{
+		if (len == 2)
+			sort_last_two(pushswap->stack_b, B);
+		// else if (len == 3)
+		// 	sort_last_three(pushswap->stack_a, pushswap->stack_b);
+		// else if (len == 4)
+		// 	sort_last_four(pushswap->stack_a, pushswap->stack_b);
+		// else if (len == 5)
+		// 	sort_last_five(pushswap->stack_a, pushswap->stack_b);
+	}
 	i = 0;
 	while (i < len)
 	{
@@ -54,8 +55,8 @@ void	partition_recursive_stack_b(t_pushswap *pushswap, size_t left, size_t right
 		base_case_solve(pushswap, len);
 		return ;
 	}
-	pivot1 = (left + right) * (1 / 3);
-	pivot2 = (left + right) * (2 / 3);
+	pivot1 = left + (len / 3);
+	pivot2 = left + (len / 3 * 2);
 	while (len--)
 	{
 		if (pushswap->ordered_arr[pivot2] <= stack_peek(pushswap->stack_a))

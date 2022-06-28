@@ -16,7 +16,8 @@ SRCS	:= \
 				get_ordered_arr.c \
 				partition_recursive.c \
 				partition_recursive2.c \
-				sort_last_n.c
+				sort_last_n.c \
+				test_func.c
 
 # SRCS_BONUS	:= \
 				main_bonus.c \
