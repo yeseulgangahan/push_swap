@@ -1,6 +1,6 @@
 NAME		:= push_swap
 
-CC			:= cc
+CC			:= gcc
 CFLAGS		:= -Wall -Wextra -Werror -g
 RM			:= rm -f
 
@@ -13,7 +13,10 @@ SRCS	:= \
 				push_swap_operations.c \
 				main.c \
 				get_valid_list.c \
-				get_ordered_array.c \
+				get_ordered_arr.c \
+				partition_recursive.c \
+				partition_recursive2.c \
+				sort_last_n.c
 
 # SRCS_BONUS	:= \
 				main_bonus.c \

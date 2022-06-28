@@ -70,7 +70,7 @@ t_clist	*get_valid_list(char **args)
 	char	**temp;
 	t_clist *plist;
 
-	plist = malloc(sizeof(t_clist));
+	plist = ft_calloc(1, sizeof(t_clist));
 	clist_init(plist);
 	i = 1;
 	while (args[i])

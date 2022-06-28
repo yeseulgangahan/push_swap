@@ -1,9 +1,10 @@
 # include <stdlib.h>
 # include "push_swap_stack.h"
+# include "./libft/include/libft.h"
 
 void	stack_init(t_stack *pstack)
 {
-	pstack = ft_calloc(sizeof(t_stack));
+	pstack = ft_calloc(1, sizeof(t_stack));
 	clist_init(pstack);
 }
 
@@ -59,27 +60,25 @@ bool	stack_is_descending_order(t_stack *pstack, size_t len)
 
 void	stack_push(t_stack *pstack1, t_stack *pstack2)
 {
-	t_data	*pdata;
+	t_data	data;
 
-	pdata = NULL;
 	if (clist_count(pstack1) == 0)
 		return ;
-	clist_first(pstack1, pdata);
+	clist_first(pstack1, &data);
 	clist_remove(pstack1);
-	clist_insert_front(pstack2, *pdata);
+	clist_insert_front(pstack2, data);
 }
 
 void	stack_swap(t_stack *pstack)
 {
-	t_data	*pdata;
+	t_data	data;
 
-	pdata = NULL;
 	if (clist_count(pstack) < 2)
 		return ;
-	clist_first(pstack, pdata);
-	clist_next(pstack, pdata);
+	clist_first(pstack, &data);
+	clist_next(pstack, &data);
 	pstack->cur->data = pstack->before->data;
-	pstack->before->data = *pdata;
+	pstack->before->data = data;
 }
 
 void	stack_rotate(t_stack *pstack, int n)
