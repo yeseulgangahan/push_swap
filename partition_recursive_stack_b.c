@@ -38,8 +38,13 @@ static void	chuck_move_to_top(t_pushswap *pushswap, size_t left, size_t pivot1, 
 		chuck_len_stack_a--;
 		chuck_len_stack_b--;
 	}
-	if (chuck_len_stack_a != 0)
+	// if (chuck_len_stack_a != 0)
+	// 	rra(pushswap->stack_a);
+	while (chuck_len_stack_a != 0)
+	{
 		rra(pushswap->stack_a);
+		chuck_len_stack_a--;
+	}
 }
 
 void	partition_recursive_stack_b(t_pushswap *pushswap, size_t left, size_t right)
@@ -58,9 +63,9 @@ void	partition_recursive_stack_b(t_pushswap *pushswap, size_t left, size_t right
 	pivot2 = left + (len / 3 * 2);
 	while (len--)
 	{
-		if (pushswap->ordered_arr[pivot2] <= stack_peek(pushswap->stack_a))
+		if (pushswap->ordered_arr[pivot2] <= stack_peek(pushswap->stack_b))
 			pa(pushswap->stack_b, pushswap->stack_a);
-		else if (pushswap->ordered_arr[pivot1] <= stack_peek(pushswap->stack_a))
+		else if (pushswap->ordered_arr[pivot1] <= stack_peek(pushswap->stack_b))
 		{
 			pa(pushswap->stack_b, pushswap->stack_a);
 			ra(pushswap->stack_a);

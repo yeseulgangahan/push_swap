@@ -27,17 +27,14 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		ft_pstr_exit("Error\n: no args..");
 	pushswap_init(&pushswap, argv);
-	test_print_arr(pushswap.ordered_arr); //
 	len = stack_count(pushswap.stack_a);
+	if (stack_is_ascending_order(pushswap.stack_a, len) == true)
+		return (0);
 	if (len <= 5)
 	{
 		sort_less_args(&pushswap, len);
-		printf("\n"); //
-		test_print_stack_a(pushswap.stack_a); //
 		return (0);
 	}
 	partition_recursive_stack_a(&pushswap, 0, stack_count(pushswap.stack_a) - 1);
-	printf("\n"); //
-	test_print_stack_a(pushswap.stack_a); //
 	return (0);
 }

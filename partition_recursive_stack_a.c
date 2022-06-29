@@ -18,15 +18,6 @@ static void	base_case_solve(t_pushswap *pushswap, size_t len)
 
 static void	chuck_move_to_top(t_pushswap *pushswap, size_t pivot1, size_t pivot2, size_t right)
 {
-	// 한 쪽만 rr해야 할 때 (처음엔 그렇다...) //
-	// size_t	chuck_len_stack_b;
-
-	// chuck_len_stack_b = right - left + 1;
-	// while (chuck_len_stack_b != 0)
-	// {
-	// 	rrb(pstack);
-	// 	chuck_len_stack_b--;
-	// }
 	size_t	chuck_len_stack_a;
 	size_t	chuck_len_stack_b;
 
@@ -38,8 +29,11 @@ static void	chuck_move_to_top(t_pushswap *pushswap, size_t pivot1, size_t pivot2
 		chuck_len_stack_a--;
 		chuck_len_stack_b--;
 	}
-	if (chuck_len_stack_a != 0)
+	while (chuck_len_stack_a != 0)
+	{
 		rra(pushswap->stack_a);
+		chuck_len_stack_a--;
+	}
 }
 
 void	partition_recursive_stack_a(t_pushswap *pushswap, size_t left, size_t right)

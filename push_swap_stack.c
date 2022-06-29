@@ -62,9 +62,6 @@ void	stack_push(t_stack *pstack1, t_stack *pstack2)
 {
 	t_data	data;
 
-	/* 이 if문의 경우는 애초에 들어오지 않을 것이다 */
-	// if (clist_count(pstack1) == 0)
-	// 	return ;
 	clist_first(pstack1, &data);
 	clist_remove(pstack1);
 	clist_insert_front(pstack2, data);
@@ -74,9 +71,6 @@ void	stack_swap(t_stack *pstack)
 {
 	t_data	data;
 
-	/* 이 if문의 경우는 애초에 들어오지 않을 것이다 */
-	// if (clist_count(pstack) < 2)
-	// 	return ;
 	clist_first(pstack, &data);
 	clist_next(pstack, &data);
 	pstack->cur->data = pstack->before->data;

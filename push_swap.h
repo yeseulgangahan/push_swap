@@ -6,6 +6,9 @@
 # include "push_swap_stack.h"
 # include "push_swap_operations.h"
 
+#define true	1
+#define false	0
+
 # define A	0
 # define B	1
 

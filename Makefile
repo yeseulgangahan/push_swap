@@ -1,6 +1,6 @@
 NAME		:= push_swap
 
-CC			:= gcc
+CC			:= cc
 CFLAGS		:= -Wall -Wextra -Werror -g
 RM			:= rm -f
 
@@ -14,8 +14,8 @@ SRCS	:= \
 				main.c \
 				get_valid_list.c \
 				get_ordered_arr.c \
-				partition_recursive.c \
-				partition_recursive2.c \
+				partition_recursive_stack_a.c \
+				partition_recursive_stack_b.c \
 				sort_less_args.c \
 				test_func.c
 

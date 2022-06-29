@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_ordered_arr.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/29 08:19:36 by yehan             #+#    #+#             */
+/*   Updated: 2022/06/29 09:28:35 by yehan            ###   ########seoul.kr  */
+/*                                                                            */
+/* ************************************************************************** */
+
 # include "push_swap.h"
 
 static void	get_arr(t_clist *plist, t_data *arr, size_t len)
@@ -31,15 +43,15 @@ static void	selection_sort(t_data *arr, size_t len)
 	{
 		min_index = i;
 		j = i + 1;
-		while(j < len)
-		{
-			if (arr[min_index] > arr[j])
-				min_index = j;
-			j++;
-		}
+		while (j < len)
+	{
+		if (arr[min_index] > arr[j])
+			min_index = j ;
+		j++;
+	}
 		temp = arr[i];
 		arr[i] = arr[min_index];
-		arr[min_index] = temp; 
+		arr[min_index] = temp;
 		i++;
 	}
 }

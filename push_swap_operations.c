@@ -40,8 +40,8 @@ void	rb(t_stack *pstack)
 
 void	rr(t_stack *pstack1, t_stack *pstack2)
 {
-	ra(pstack1);
-	rb(pstack2);
+	stack_rotate(pstack1, 1);
+	stack_rotate(pstack2, 1);
 	ft_putstr_fd("rr\n", STDOUT_FILENO);
 }
 
@@ -59,7 +59,7 @@ void	rrb(t_stack *pstack)
 
 void	rrr(t_stack *pstack1, t_stack *pstack2)
 {
-	rra(pstack1);
-	rrb(pstack2);
+	stack_rotate(pstack1, stack_count(pstack1) - 1);
+	stack_rotate(pstack2, stack_count(pstack2) - 1);
 	ft_putstr_fd("rrr\n", STDOUT_FILENO);
 }

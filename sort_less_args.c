@@ -11,9 +11,8 @@ static void	sort_3_args(t_stack *pstack)
 	a3 = pstack->tail->data;
 	if (a1 < a2 && a2 > a3 && a3 > a1)
 	{
-		ra(pstack);
 		sa(pstack);
-		rra(pstack);
+		ra(pstack);
 	}
 	else if (a1 > a2 && a2 < a3 && a3 > a1)
 		sa(pstack);
@@ -78,8 +77,6 @@ static void	min_data_pop(t_pushswap *pushswap, size_t len, size_t index)
 
 void	sort_less_args(t_pushswap *pushswap, size_t len)
 {
-	if (stack_is_ascending_order(pushswap->stack_a, len) == true)
-		return ;
 	if (len == 2)
 		sa(pushswap->stack_a);
 	else if (len == 3)
