@@ -16,10 +16,29 @@ static void	base_case_solve(t_pushswap *pushswap, size_t len)
 	}
 }
 
-static void	partition(t_pushswap *pushswap, size_t pivot1, size_t pivot2, size_t len)
+static bool	is_rb_needed(t_pushswap *pushswap, size_t pivot1, size_t range)
 {
 	t_data	data;
 
+	while (range)
+	{
+		stack_next(pushswap->stack_a, &data);
+		if (pushswap->ordered_arr[pivot1] <= data)
+			break;
+		range--;
+	}
+	if (range == 0)
+		return (false);
+	else
+		return (true);
+}
+
+static size_t	partition(t_pushswap *pushswap, size_t pivot1, size_t pivot2, size_t len)
+{
+	t_data	data;
+	size_t	rb_cnt;
+
+	rb_cnt = 0;
 	while (len)
 	{
 		stack_peek(pushswap->stack_b, &data);
@@ -31,28 +50,34 @@ static void	partition(t_pushswap *pushswap, size_t pivot1, size_t pivot2, size_t
 			ra(pushswap->stack_a);
 		}
 		else
+		{
+			if (is_rb_needed(pushswap, pivot1, len - 1) == false)
+				break ;
 			rb(pushswap->stack_b);
+			rb_cnt++;
+		}
 		len--;
 	}
+	return (rb_cnt);
 }
 
-static void	chuck_move_to_top(t_pushswap *pushswap, size_t left, size_t pivot1, size_t pivot2)
+static void	move_range_to_top(t_pushswap *pushswap, size_t range_stack_a, size_t range_stack_b)
 {
-	size_t	chuck_len_stack_a;
-	size_t	chuck_len_stack_b;
-
-	chuck_len_stack_a = pivot2 - pivot1;
-	chuck_len_stack_b = pivot1 - left;
-	while (chuck_len_stack_b != 0)
+	while (range_stack_a != 0 && range_stack_b != 0)
 	{
 		rrr(pushswap->stack_a, pushswap->stack_b);
-		chuck_len_stack_a--;
-		chuck_len_stack_b--;
+		range_stack_a--;
+		range_stack_b--;
 	}
-	while (chuck_len_stack_a != 0)
+	while (range_stack_a != 0)
 	{
 		rra(pushswap->stack_a);
-		chuck_len_stack_a--;
+		range_stack_a--;
+	}
+	while (range_stack_b != 0)
+	{
+		rrb(pushswap->stack_b);
+		range_stack_b--;
 	}
 }
 
@@ -61,18 +86,19 @@ void	partition_recursive_stack_b(t_pushswap *pushswap, size_t left, size_t right
 	size_t	pivot1;
 	size_t	pivot2;
 	size_t	len;
+	size_t	rb_cnt;
 
 	len = right - left + 1;
 	if (len <= 2)
-	{
 		base_case_solve(pushswap, len);
-		return ;
+	else
+	{
+		pivot1 = left + (len / 3);
+		pivot2 = left + (len / 3 * 2);
+		rb_cnt = partition(pushswap, pivot1, pivot2, len);
+		partition_recursive_stack_a(pushswap, pivot2, right);
+		move_range_to_top(pushswap, pivot2 - pivot1, rb_cnt);
+		partition_recursive_stack_a(pushswap, pivot1, pivot2 - 1);
+		partition_recursive_stack_b(pushswap, left, pivot1 - 1);
 	}
-	pivot1 = left + (len / 3);
-	pivot2 = left + (len / 3 * 2);
-	partition(pushswap, pivot1, pivot2, len);
-	partition_recursive_stack_a(pushswap, pivot2, right);
-	chuck_move_to_top(pushswap, left, pivot1, pivot2);
-	partition_recursive_stack_a(pushswap, pivot1, pivot2 - 1);
-	partition_recursive_stack_b(pushswap, left, pivot1 - 1);
 }
