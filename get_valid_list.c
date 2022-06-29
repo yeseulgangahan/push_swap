@@ -7,6 +7,8 @@ static int	ft_atoi_strict(const char *str)
 	size_t	temp_num;
 	long	cnt;
 
+	if (*str == '\0')
+		ft_pstr_exit("Error\n");
 	neg = 1;
 	if (*str == '-')
 		neg = -1;
@@ -18,15 +20,15 @@ static int	ft_atoi_strict(const char *str)
 	{
 		temp_num =  num * 10 + (*str - '0');
 		if (neg == -1 && (cnt == 0 || temp_num > -(size_t)INT_MIN))
-			ft_pstr_exit("Error\n: some arguments are smaller than an integer..");
+			ft_pstr_exit("Error\n");
 		if (neg == 1 && (cnt == 0 || temp_num > (size_t)INT_MAX))
-			ft_pstr_exit("Error\n: some arguments are bigger than an integer..");
+			ft_pstr_exit("Error\n");
 		num = temp_num;
 		cnt = cnt / 10;
 		str++;
 	}
 	if (*str != 0)
-		ft_pstr_exit("Error\n: some arguments aren’t integers..");
+		ft_pstr_exit("Error\n");
 	return (neg * num);
 }
 
@@ -59,7 +61,7 @@ static int	get_valid_number(t_clist *list, char *str)
 
 	num = ft_atoi_strict(str);
 	if (is_unique_number(list, num) == false)
-		ft_pstr_exit("Error\n: there are duplicates..");
+		ft_pstr_exit("Error\n");
 	return (num);
 }
 

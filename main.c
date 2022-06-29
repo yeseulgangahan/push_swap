@@ -14,18 +14,18 @@ int	main(int argc, char **argv)
 {
 	t_pushswap	pushswap;
 	size_t		len;
-
-	if (argc == 1)
-		ft_pstr_exit("Error\n: no args..");
-	pushswap_init(&pushswap, argv);
-	len = stack_count(pushswap.stack_a);
-	if (stack_is_ascending_order(pushswap.stack_a, len) == false)
+	if (argc > 1)
 	{
-		if (len <= 5)
-			sort_less_args(&pushswap, len);
-		else
-			partition_recursive_stack_a(&pushswap, 0, len - 1);
-		// test_print_stack_a(pushswap.stack_a);
+		pushswap_init(&pushswap, argv);
+		len = stack_count(pushswap.stack_a);
+		if (stack_is_ascending_order(pushswap.stack_a, len) == false)
+		{
+			if (len <= 5)
+				sort_less_args(&pushswap, len);
+			else
+				partition_recursive_stack_a(&pushswap, 0, len - 1);
+			// test_print_stack_a(pushswap.stack_a);
+		}
 	}
 	return (0);
 }

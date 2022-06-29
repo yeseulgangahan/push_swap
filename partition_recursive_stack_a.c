@@ -2,7 +2,7 @@
 
 static void	base_case_solve(t_pushswap *pushswap, size_t len)
 {
-	if (len == 2 && stack_is_ascending_order(pushswap->stack_a, len) == false)
+	if (len == 2)
 		sa(pushswap->stack_a);
 }
 
@@ -29,25 +29,31 @@ static size_t	partition(t_pushswap *pushswap, size_t pivot1, size_t pivot2, size
 	size_t	ra_cnt;
 
 	ra_cnt = 0;
-	while (len)
-	{
-		stack_peek(pushswap->stack_a, &data);
-		if (pushswap->ordered_arr[pivot2] <= data)
+	// if (pushswap->is_initial == true)
+	// 	partition_initial(); // b에 1 - 2 순서로 쌓지 말고 처음부터 2 - 1 순서로 쌓아서 rb 안해도 되게 하자.
+	// else
+	// {
+		while (len)
 		{
-			if (is_ra_needed(pushswap, pivot2, len - 1) == false)
-				break ;
-			ra(pushswap->stack_a);
-			ra_cnt++;
+			stack_peek(pushswap->stack_a, &data);
+			if (pushswap->ordered_arr[pivot2] <= data)
+			{
+				if (is_ra_needed(pushswap, pivot2, len - 1) == false)
+					break ;
+				ra(pushswap->stack_a);
+				ra_cnt++;
+			}
+			else if (pushswap->ordered_arr[pivot1] <= data)
+			{
+				pb(pushswap->stack_a, pushswap->stack_b);
+				rb(pushswap->stack_b);
+			}
+			else
+				pb(pushswap->stack_a, pushswap->stack_b);
+			len--;
 		}
-		else if (pushswap->ordered_arr[pivot1] <= data)
-		{
-			pb(pushswap->stack_a, pushswap->stack_b);
-			rb(pushswap->stack_b);
-		}
-		else
-			pb(pushswap->stack_a, pushswap->stack_b);
-		len--;
-	}
+		//move_range_to_top(); 안으로 들어와야 한다. 처음엔 안 할 거니까.
+	// }
 	return (ra_cnt);
 }
 
@@ -79,7 +85,9 @@ void	partition_recursive_stack_a(t_pushswap *pushswap, size_t left, size_t right
 	size_t	ra_cnt;
 
 	len = right - left + 1;
-	if (len <= 2)
+	if (stack_is_ascending_order(pushswap->stack_a, len) == true)
+		return ;
+	else if (len <= 2)
 		base_case_solve(pushswap, len);
 	else
 	{

@@ -6,7 +6,7 @@ static void	base_case_solve(t_pushswap *pushswap, size_t len)
 {
 	size_t	i;
 
-	if (len == 2 && stack_is_descending_order(pushswap->stack_b, len) == false)
+	if (len == 2)
 		sb(pushswap->stack_b);
 	i = 0;
 	while (i < len)
@@ -89,7 +89,15 @@ void	partition_recursive_stack_b(t_pushswap *pushswap, size_t left, size_t right
 	size_t	rb_cnt;
 
 	len = right - left + 1;
-	if (len <= 2)
+	if (stack_is_descending_order(pushswap->stack_a, len) == true)
+	{
+		while (len)
+		{
+			pa(pushswap->stack_b, pushswap->stack_a);
+			len--;
+		}
+	}
+	else if (len <= 2)
 		base_case_solve(pushswap, len);
 	else
 	{
