@@ -6,6 +6,26 @@ static void	base_case_solve(t_pushswap *pushswap, size_t len)
 		sa(pushswap->stack_a);
 }
 
+static void	partition(t_pushswap *pushswap, size_t pivot1, size_t pivot2, size_t len)
+{
+	t_data	data;
+
+	while (len)
+	{
+		stack_peek(pushswap->stack_a, &data);
+		if (pushswap->ordered_arr[pivot2] <= data)
+			ra(pushswap->stack_a);
+		else if (pushswap->ordered_arr[pivot1] <= data)
+		{
+			pb(pushswap->stack_a, pushswap->stack_b);
+			rb(pushswap->stack_b);
+		}
+		else
+			pb(pushswap->stack_a, pushswap->stack_b);
+		len--;
+	}
+}
+
 static void	chuck_move_to_top(t_pushswap *pushswap, size_t pivot1, size_t pivot2, size_t right)
 {
 	size_t	chuck_len_stack_a;
@@ -26,22 +46,6 @@ static void	chuck_move_to_top(t_pushswap *pushswap, size_t pivot1, size_t pivot2
 	}
 }
 
-static void	partition(t_pushswap *pushswap, size_t pivot1, size_t pivot2, size_t len)
-{
-	while (len--)
-	{
-		if (pushswap->ordered_arr[pivot2] <= stack_peek(pushswap->stack_a))
-			ra(pushswap->stack_a);
-		else if (pushswap->ordered_arr[pivot1] <= stack_peek(pushswap->stack_a))
-		{
-			pb(pushswap->stack_a, pushswap->stack_b);
-			rb(pushswap->stack_b);
-		}
-		else
-			pb(pushswap->stack_a, pushswap->stack_b);
-	}
-}
-
 void	partition_recursive_stack_a(t_pushswap *pushswap, size_t left, size_t right)
 {
 	size_t	pivot1;
@@ -55,10 +59,8 @@ void	partition_recursive_stack_a(t_pushswap *pushswap, size_t left, size_t right
 	{
 		pivot1 = left + (len / 3);
 		pivot2 = left + (len / 3 * 2);
-
 		partition(pushswap, pivot1, pivot2, len);
 		chuck_move_to_top(pushswap, pivot1, pivot2, right);
-
 		partition_recursive_stack_a(pushswap, pivot2, right);
 		partition_recursive_stack_b(pushswap, pivot1, pivot2 - 1);
 		partition_recursive_stack_b(pushswap, left, pivot1 - 1);

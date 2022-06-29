@@ -7,7 +7,7 @@ typedef t_clist	t_stack;
 
 void	stack_init(t_stack *pstack);
 int		stack_count(t_stack *pstack);
-t_data	stack_peek(t_stack *pstack);
+bool	stack_peek(t_stack *pstack, t_data *pdata);
 bool	stack_is_descending_order(t_stack *pstack, size_t len);
 bool	stack_is_ascending_order(t_stack *pstack, size_t len);
 void	stack_push(t_stack *pstack1, t_stack *pstack2);

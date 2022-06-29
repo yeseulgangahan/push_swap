@@ -13,9 +13,9 @@ int	stack_count(t_stack *pstack)
 	return (clist_count(pstack));
 }
 
-t_data	stack_peek(t_stack *pstack)
+bool	stack_peek(t_stack *pstack, t_data *pdata)
 {
-	return (pstack->tail->next->data);
+	return (clist_first(pstack, pdata));
 }
 
 bool	stack_is_ascending_order(t_stack *pstack, size_t len)
