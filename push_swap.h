@@ -1,6 +1,7 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+// # include <stdlib.h>
 # include "./libft/include/libft.h"
 # include "./libft/include/circular_linked_list.h"
 # include "push_swap_stack.h"
@@ -17,6 +18,7 @@ typedef struct	s_pushswap
 	t_stack	*stack_a;
 	t_stack *stack_b;
 	t_data	*ordered_arr;
+	bool	is_initial;
 }	t_pushswap;
 
 void	get_valid_stack_a(t_stack *pstack, char **args);

@@ -6,13 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
 
-# Make data base, printed on Wed Jun 29 14:11:25 2022
+# Make data base, printed on Thu Jun 30 07:45:42 2022
 
 # Variables
 
- 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
@@ -44,7 +42,7 @@ VSCODE_VERBOSE_LOGGING = true
 # makefile (from `Makefile', line 25)
 OBJS = $(SRCS:.c=.o)
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cm_800352k/T/vscode-ipc-1c77f87b-0e1b-458e-b466-b39c26b62992.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cm_800352k/T/vscode-ipc-e7cfe516-7d52-4582-a4a9-706d055cf249.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -54,7 +52,7 @@ LSCOLORS = Gxfxcxdxbxegedabagacad
 # makefile (from `Makefile', line 7)
 LIBFLAGS := -L./libft -lft
 # environment
-LaunchInstanceID = BD323847-2CA1-4617-B14A-2FCE450ABD86
+LaunchInstanceID = CAAE2850-7986-44F5-9B0F-D8BAF92E1CD9
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -62,7 +60,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.uMTNinyqu8/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.kQQazrFM4j/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -130,7 +128,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000002.Electron
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x1000000a.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -150,7 +148,7 @@ PAGER = less
 # environment
 LC_ALL = C
 # environment
-SECURITYSESSIONID = 186a6
+SECURITYSESSIONID = 186c7
 # automatic
 ^F = $(notdir $^)
 # default
@@ -162,8 +160,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1994
+VSCODE_PID = 18520
 # variable set hash-table stats:
+ 
 # Load=75/1024=7%, Rehash=0, Collisions=3/104=3%
 
 # Pattern-specific Variable Values
@@ -185,7 +184,7 @@ VSCODE_PID = 1994
 # Not a target:
 sort_less_args.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 13:05:00
+#  Last modified 2022-06-30 07:39:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -209,7 +208,7 @@ all: push_swap
 # Not a target:
 push_swap_stack.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 13:05:00
+#  Last modified 2022-06-30 07:39:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -233,7 +232,7 @@ Makefile:
 # Not a target:
 test_func.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 13:05:00
+#  Last modified 2022-06-30 07:39:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -242,8 +241,7 @@ test_func.o:
 # Not a target:
 push_swap_operations.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 13:05:00
- 
+#  Last modified 2022-06-30 07:39:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -252,7 +250,7 @@ push_swap_operations.o:
 # Not a target:
 get_valid_list.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 13:05:00
+#  Last modified 2022-06-30 07:39:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -310,7 +308,7 @@ clean:
 
 push_swap: push_swap_stack.o push_swap_operations.o main.o get_valid_list.o get_ordered_arr.o partition_recursive_stack_a.o partition_recursive_stack_b.o sort_less_args.o test_func.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-29 13:05:02
+#  Last modified 2022-06-30 07:39:03
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -323,7 +321,7 @@ push_swap: push_swap_stack.o push_swap_operations.o main.o get_valid_list.o get_
 # Not a target:
 partition_recursive_stack_a.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 13:05:00
+#  Last modified 2022-06-30 07:39:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -332,7 +330,7 @@ partition_recursive_stack_a.o:
 # Not a target:
 get_ordered_arr.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 13:05:00
+#  Last modified 2022-06-30 07:39:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -341,7 +339,7 @@ get_ordered_arr.o:
 # Not a target:
 main.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 13:05:00
+#  Last modified 2022-06-30 07:39:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -350,7 +348,7 @@ main.o:
 # Not a target:
 partition_recursive_stack_b.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 13:05:00
+#  Last modified 2022-06-30 07:39:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -369,6 +367,6 @@ partition_recursive_stack_b.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Jun 29 14:11:25 2022
+# Finished Make data base on Thu Jun 30 07:45:42 2022
 
  

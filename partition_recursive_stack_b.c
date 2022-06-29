@@ -88,8 +88,9 @@ void	partition_recursive_stack_b(t_pushswap *pushswap, size_t left, size_t right
 	size_t	len;
 	size_t	rb_cnt;
 
+	// ft_putstr_fd("stack_b enter\n", 1); //
 	len = right - left + 1;
-	if (stack_is_descending_order(pushswap->stack_a, len) == true)
+	if (stack_is_descending_order(pushswap->stack_b, len) == true)
 	{
 		while (len)
 		{

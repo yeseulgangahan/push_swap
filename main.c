@@ -8,6 +8,7 @@ static void	pushswap_init(t_pushswap *pushswap, char **args)
 	pushswap->stack_b = ft_calloc(1, sizeof(t_clist));
 	stack_init(pushswap->stack_b);
 	pushswap->ordered_arr = get_ordered_arr((t_clist *)pushswap->stack_a);
+	pushswap->is_initial = true;
 }
 
 int	main(int argc, char **argv)
