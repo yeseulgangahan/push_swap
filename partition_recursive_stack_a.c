@@ -4,16 +4,8 @@
 
 static void	base_case_solve(t_pushswap *pushswap, size_t len)
 {
-	if (stack_is_ascending_order(pushswap->stack_a, len) == true)
-		return ;
-	else if (len == 2)
-		sort_last_two(pushswap->stack_a, A);
-	// else if (len == 3)
-	// 	sort_last_three(pushswap->stack_a, pushswap->stack_b);
-	// else if (len == 4)
-	// 	sort_last_four(pushswap->stack_a, pushswap->stack_b);
-	// else if (len == 5)
-	// 	sort_last_five(pushswap->stack_a, pushswap->stack_b);
+	if (len == 2 && stack_is_ascending_order(pushswap->stack_a, len) == false)
+		sa(pushswap->stack_a);
 }
 
 static void	chuck_move_to_top(t_pushswap *pushswap, size_t pivot1, size_t pivot2, size_t right)

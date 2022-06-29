@@ -6,17 +6,8 @@ static void	base_case_solve(t_pushswap *pushswap, size_t len)
 {
 	size_t	i;
 
-	if (stack_is_descending_order(pushswap->stack_b, len) == false)
-	{
-		if (len == 2)
-			sort_last_two(pushswap->stack_b, B);
-		// else if (len == 3)
-		// 	sort_last_three(pushswap->stack_a, pushswap->stack_b);
-		// else if (len == 4)
-		// 	sort_last_four(pushswap->stack_a, pushswap->stack_b);
-		// else if (len == 5)
-		// 	sort_last_five(pushswap->stack_a, pushswap->stack_b);
-	}
+	if (len == 2 && stack_is_descending_order(pushswap->stack_b, len) == false)
+		sb(pushswap->stack_b);
 	i = 0;
 	while (i < len)
 	{
