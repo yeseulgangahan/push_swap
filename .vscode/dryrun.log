@@ -1,6 +1,7 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/yehan/push_swap'
 cc -Wall -Wextra -Werror -g   -c -o push_swap_stack.o push_swap_stack.c
+ 
 cc -Wall -Wextra -Werror -g   -c -o push_swap_operations.o push_swap_operations.c
 cc -Wall -Wextra -Werror -g   -c -o main.o main.c
 cc -Wall -Wextra -Werror -g   -c -o get_valid_list.o get_valid_list.c

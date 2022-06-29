@@ -25,6 +25,7 @@ int	main(int argc, char **argv)
 			sort_less_args(&pushswap, len);
 		else
 			partition_recursive_stack_a(&pushswap, 0, len - 1);
+		// test_print_stack_a(pushswap.stack_a);
 	}
 	return (0);
 }

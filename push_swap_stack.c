@@ -18,6 +18,11 @@ bool	stack_peek(t_stack *pstack, t_data *pdata)
 	return (clist_first(pstack, pdata));
 }
 
+bool	stack_next(t_stack *pstack, t_data *pdata)
+{
+	return (clist_next(pstack, pdata));
+}
+
 bool	stack_is_ascending_order(t_stack *pstack, size_t len)
 {
 	t_data	data;
