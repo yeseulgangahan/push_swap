@@ -8,12 +8,12 @@
 			"name": "(lldb) Launch",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/push_swap",
-			"args": ["3 6 1 5 2 4"],
+			"program": "${workspaceFolder}/checker",
+			"args": ["4", "3", "0", "1", "5", "9", "10"],
 			"stopAtEntry": true,
 			"cwd": "${fileDirname}",
 			"environment": [],
-			"externalConsole": false,
+			"externalConsole": true,
 			"MIMode": "lldb"
 		}
 	]

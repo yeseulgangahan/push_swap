@@ -6,7 +6,7 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:03:47 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 19:17:42 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/07/01 07:39:52 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	sa(t_stack *pstack)
 {
-	if (stack_count(pstack) > 1)
+	if (stack_count(pstack) >= 2)
 	{
 		stack_swap(pstack);
 		ft_putstr_fd("sa\n", STDOUT_FILENO);

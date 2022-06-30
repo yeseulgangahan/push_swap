@@ -6,7 +6,7 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 17:10:46 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 19:30:29 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/07/01 07:39:53 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	sa_silent(t_stack *pstack)
 {
-	if (stack_count(pstack) > 2)
+	if (stack_count(pstack) >= 2)
 	{
 		stack_swap(pstack);
 	}
@@ -23,7 +23,7 @@ void	sa_silent(t_stack *pstack)
 
 void	sb_silent(t_stack *pstack)
 {
-	if (stack_count(pstack) > 2)
+	if (stack_count(pstack) >= 2)
 	{
 		stack_swap(pstack);
 	}
@@ -31,9 +31,9 @@ void	sb_silent(t_stack *pstack)
 
 void	ss_silent(t_stack *pstack1, t_stack *pstack2)
 {
-	if (stack_count(pstack1) > 2)
+	if (stack_count(pstack1) >= 2)
 		stack_swap(pstack1);
-	if (stack_count(pstack2) > 2)
+	if (stack_count(pstack2) >= 2)
 		stack_swap(pstack2);
 }
 
