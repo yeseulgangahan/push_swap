@@ -6,7 +6,7 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 10:42:19 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 13:38:12 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/06/30 13:52:49 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ static int	ft_atoi_strict(const char *str)
 		num = temp_num;
 		str++;
 	}
+	if (*str != '\0')
+		ft_pstr_exit("Error\n");
 	return (neg * num);
 }
 
