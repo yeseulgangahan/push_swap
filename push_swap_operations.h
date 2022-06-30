@@ -6,13 +6,14 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:04:38 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 19:29:16 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/07/01 08:12:35 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_OPERATIONS_H
 # define PUSH_SWAP_OPERATIONS_H
 
+# include "./libft/include/libft.h"
 # include "./libft/include/push_swap_stack.h"
 
 void	sa(t_stack *pstack);

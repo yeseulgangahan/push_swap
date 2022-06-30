@@ -6,11 +6,10 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:03:47 by yehan             #+#    #+#             */
-/*   Updated: 2022/07/01 07:39:52 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/07/01 08:12:43 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/include/libft.h"
 #include "push_swap_operations.h"
 
 void	sa(t_stack *pstack)

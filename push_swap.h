@@ -6,7 +6,7 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:09:32 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 19:28:13 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/07/01 08:03:25 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "./libft/include/libft.h"
 # include "./libft/include/circular_linked_list.h"
+# include "./libft/include/push_swap_stack.h"
 # include "push_swap_operations.h"
 
 # define TRUE 1

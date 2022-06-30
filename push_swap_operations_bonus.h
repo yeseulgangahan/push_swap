@@ -6,12 +6,12 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:04:38 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 19:30:21 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/07/01 08:13:38 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_OPERATIONS_H
-# define PUSH_SWAP_OPERATIONS_H
+#ifndef PUSH_SWAP_OPERATIONS_BONUS_H
+# define PUSH_SWAP_OPERATIONS_BONUS_H
 
 # include "./libft/include/push_swap_stack.h"
 

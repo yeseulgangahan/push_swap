@@ -6,11 +6,10 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:03:43 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 19:00:30 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/07/01 08:13:24 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/include/libft.h"
 #include "push_swap_operations_bonus.h"
 
 void	ra_silent(t_stack *pstack)
