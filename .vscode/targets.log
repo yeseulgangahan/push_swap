@@ -6,8 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `main.o', needed by `push_swap'.  Stop.
 
-# Make data base, printed on Thu Jun 30 07:45:42 2022
+
+# Make data base, printed on Thu Jun 30 10:59:51 2022
 
 # Variables
 
@@ -94,7 +97,7 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # makefile (from `Makefile', line 11)
-SRCS := push_swap_stack.c push_swap_operations.c main.c get_valid_list.c get_ordered_arr.c partition_recursive_stack_a.c partition_recursive_stack_b.c sort_less_args.c test_func.c
+SRCS := push_swap_stack.c push_swap_operations.c main.c get_valid_list.c get_ordered_arr.c partition_recur_stack_a.c partition_recur_stack_b.c sort_last_3_data.c sort_small_problem.c
 # environment
 SHLVL = 1
 # makefile (from `Makefile', line 3)
@@ -121,6 +124,7 @@ TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n000cm_800352k/T/
 *F = $(notdir $*)
 # environment
 VSCODE_IPC_HOOK = /Users/yehan/Library/Application Support/Code/1.67.2-main.sock
+ 
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -162,7 +166,6 @@ LANG = C
 # environment
 VSCODE_PID = 18520
 # variable set hash-table stats:
- 
 # Load=75/1024=7%, Rehash=0, Collisions=3/104=3%
 
 # Pattern-specific Variable Values
@@ -171,9 +174,9 @@ VSCODE_PID = 18520
 
 # Directories
 
-# . (device 16777225, inode 2407798): 32 files, no impossibilities.
+# . (device 16777225, inode 2407798): 25 files, no impossibilities.
 
-# 32 files, no impossibilities in 1 directories.
+# 25 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -181,24 +184,20 @@ VSCODE_PID = 18520
 
 # Files
 
-# Not a target:
-sort_less_args.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-30 07:39:01
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
 all: push_swap
 #  Phony target (prerequisite of .PHONY).
 #  Command-line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has been updated.
-#  Successfully updated.
+#  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+partition_recur_stack_a.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 .PHONY: all clean fclean rclean re bonus
 #  Implicit rule search has not been done.
@@ -208,11 +207,17 @@ all: push_swap
 # Not a target:
 push_swap_stack.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-30 07:39:01
+#  Last modified 2022-06-30 10:59:29
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+sort_last_3_data.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .SUFFIXES:
@@ -223,25 +228,22 @@ push_swap_stack.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-29 12:21:05
+#  Last modified 2022-06-30 10:59:48
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-test_func.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-30 07:39:01
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+partition_recur_stack_b.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 push_swap_operations.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-30 07:39:01
+#  Last modified 2022-06-30 10:59:29
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -249,12 +251,9 @@ push_swap_operations.o:
 
 # Not a target:
 get_valid_list.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-30 07:39:01
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 bonus:
 #  Phony target (prerequisite of .PHONY).
@@ -290,6 +289,12 @@ rclean: fclean
 #  Modification time never checked.
 #  File has not been updated.
 
+# Not a target:
+sort_small_problem.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 re: fclean all
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -306,11 +311,10 @@ clean:
 	$(RM) $(OBJS) $(OBJS_BONUS)
 	
 
-push_swap: push_swap_stack.o push_swap_operations.o main.o get_valid_list.o get_ordered_arr.o partition_recursive_stack_a.o partition_recursive_stack_b.o sort_less_args.o test_func.o
+push_swap: push_swap_stack.o push_swap_operations.o main.o get_valid_list.o get_ordered_arr.o partition_recur_stack_a.o partition_recur_stack_b.o sort_last_3_data.o sort_small_problem.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-30 07:39:03
-#  File has been updated.
-#  Successfully updated.
+#  File does not exist.
+#  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 #  commands to execute (from `Makefile', line 53):
@@ -319,38 +323,16 @@ push_swap: push_swap_stack.o push_swap_operations.o main.o get_valid_list.o get_
 	
 
 # Not a target:
-partition_recursive_stack_a.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-30 07:39:01
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
 get_ordered_arr.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-30 07:39:01
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 main.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-30 07:39:01
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-partition_recursive_stack_b.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-30 07:39:01
-#  File has been updated.
-#  Successfully updated.
+#  File does not exist.
+#  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
@@ -367,6 +349,6 @@ partition_recursive_stack_b.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jun 30 07:45:42 2022
+# Finished Make data base on Thu Jun 30 10:59:51 2022
 
  

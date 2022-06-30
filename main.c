@@ -1,13 +1,25 @@
-# include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/30 10:34:01 by yehan             #+#    #+#             */
+/*   Updated: 2022/06/30 10:59:54 by yehan            ###   ########seoul.kr  */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
 
 static void	pushswap_init(t_pushswap *pushswap, char **args)
 {
-	pushswap->stack_a = ft_calloc(1, sizeof(t_clist));
+	pushswap->stack_a = ft_calloc(1, sizeof(t_stack));
 	stack_init(pushswap->stack_a);
 	get_valid_stack_a(pushswap->stack_a, args);
-	pushswap->stack_b = ft_calloc(1, sizeof(t_clist));
+	pushswap->stack_b = ft_calloc(1, sizeof(t_stack));
 	stack_init(pushswap->stack_b);
-	pushswap->ordered_arr = get_ordered_arr((t_clist *)pushswap->stack_a);
+	pushswap->ordered_arr = get_ordered_arr(pushswap->stack_a);
 	pushswap->is_initial = true;
 }
 
@@ -15,6 +27,7 @@ int	main(int argc, char **argv)
 {
 	t_pushswap	pushswap;
 	size_t		len;
+
 	if (argc > 1)
 	{
 		pushswap_init(&pushswap, argv);
@@ -22,10 +35,9 @@ int	main(int argc, char **argv)
 		if (stack_is_ascending_order(pushswap.stack_a, len) == false)
 		{
 			if (len <= 5)
-				sort_less_args(&pushswap, len);
+				sort_small_problem(&pushswap, len);
 			else
-				partition_recursive_stack_a(&pushswap, 0, len - 1);
-			// test_print_stack_a(pushswap.stack_a); //
+				partition_recur_stack_a(&pushswap, 0, len - 1);
 		}
 	}
 	return (0);

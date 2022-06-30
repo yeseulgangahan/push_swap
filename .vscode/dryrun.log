@@ -1,15 +1,15 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/yehan/push_swap'
-cc -Wall -Wextra -Werror -g   -c -o push_swap_stack.o push_swap_stack.c
-cc -Wall -Wextra -Werror -g   -c -o push_swap_operations.o push_swap_operations.c
 cc -Wall -Wextra -Werror -g   -c -o main.o main.c
 cc -Wall -Wextra -Werror -g   -c -o get_valid_list.o get_valid_list.c
+ 
 cc -Wall -Wextra -Werror -g   -c -o get_ordered_arr.o get_ordered_arr.c
-cc -Wall -Wextra -Werror -g   -c -o partition_recursive_stack_a.o partition_recursive_stack_a.c
-cc -Wall -Wextra -Werror -g   -c -o partition_recursive_stack_b.o partition_recursive_stack_b.c
-cc -Wall -Wextra -Werror -g   -c -o sort_less_args.o sort_less_args.c
-cc -Wall -Wextra -Werror -g   -c -o test_func.o test_func.c
+cc -Wall -Wextra -Werror -g   -c -o partition_recur_stack_a.o partition_recur_stack_a.c
+cc -Wall -Wextra -Werror -g   -c -o partition_recur_stack_b.o partition_recur_stack_b.c
+ 
+cc -Wall -Wextra -Werror -g   -c -o sort_last_3_data.o sort_last_3_data.c
+cc -Wall -Wextra -Werror -g   -c -o sort_small_problem.o sort_small_problem.c
 make --directory=./libft
-cc -Wall -Wextra -Werror -g -L./libft -lft push_swap_stack.o push_swap_operations.o main.o get_valid_list.o get_ordered_arr.o partition_recursive_stack_a.o partition_recursive_stack_b.o sort_less_args.o test_func.o -o push_swap
+cc -Wall -Wextra -Werror -g -L./libft -lft push_swap_stack.o push_swap_operations.o main.o get_valid_list.o get_ordered_arr.o partition_recur_stack_a.o partition_recur_stack_b.o sort_last_3_data.o sort_small_problem.o -o push_swap
 make: Leaving directory `/Users/yehan/push_swap'
  

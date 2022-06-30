@@ -1,7 +1,7 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-// # include <stdlib.h>
+# include <stdbool.h>
 # include "./libft/include/libft.h"
 # include "./libft/include/circular_linked_list.h"
 # include "push_swap_stack.h"
@@ -24,13 +24,14 @@ typedef struct	s_pushswap
 void	get_valid_stack_a(t_stack *pstack, char **args);
 t_data	*get_ordered_arr(t_clist *plist);
 
-void	partition_recursive_stack_a(t_pushswap *pushswap, size_t left, size_t right);
-void	partition_recursive_stack_b(t_pushswap *pushswap, size_t left, size_t right);
+void	partition_recur_stack_a(t_pushswap *pushswap, size_t left, size_t right);
+void	partition_recur_stack_b(t_pushswap *pushswap, size_t left, size_t right);
 
-void	sort_last_two(t_stack *pstack, int stack);
-void	sort_less_args(t_pushswap *pushswap, size_t len);
+void	sort_last_3_data(t_pushswap *pushswap);
+void	sort_small_problem(t_pushswap *pushswap, size_t len);
 
-void	test_print_arr(t_data *arr);
-void	test_print_stack_a(t_stack *pstack);
+
+// void	test_print_arr(t_data *arr);
+// void	test_print_stack_a(t_stack *pstack);
 
 #endif

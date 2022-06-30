@@ -1,6 +1,6 @@
 # include "push_swap.h"
 
-static void	sort_3_args(t_stack *pstack)
+static void	sort_3_data(t_stack *pstack)
 {
 	t_data	d1;
 	t_data	d2;
@@ -75,17 +75,17 @@ static void	min_data_pop(t_pushswap *pushswap, size_t len, size_t index)
 	pb(pushswap->stack_a, pushswap->stack_b);
 }
 
-void	sort_less_args(t_pushswap *pushswap, size_t len)
+void	sort_small_problem(t_pushswap *pushswap, size_t len)
 {
 	if (len == 2)
 		sa(pushswap->stack_a);
 	else if (len == 3)
-		sort_3_args(pushswap->stack_a);
+		sort_3_data(pushswap->stack_a);
 	else if (len == 4)
 	{
 		min_data_pop(pushswap, len, 0);
 		if (stack_is_ascending_order(pushswap->stack_a, 3) == false)
-			sort_3_args(pushswap->stack_a);
+			sort_3_data(pushswap->stack_a);
 		pa(pushswap->stack_b, pushswap->stack_a);
 	}
 	else if (len == 5)
@@ -93,7 +93,7 @@ void	sort_less_args(t_pushswap *pushswap, size_t len)
 		min_data_pop(pushswap, len, 0);
 		min_data_pop(pushswap, len - 1, 1);
 		if (stack_is_ascending_order(pushswap->stack_a, 3) == false)
-			sort_3_args(pushswap->stack_a);
+			sort_3_data(pushswap->stack_a);
 		pa(pushswap->stack_b, pushswap->stack_a);
 		pa(pushswap->stack_b, pushswap->stack_a);
 	}

@@ -1,11 +1,22 @@
-# include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_valid_list.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/30 10:42:19 by yehan             #+#    #+#             */
+/*   Updated: 2022/06/30 10:42:26 by yehan            ###   ########seoul.kr  */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
 
 static int	ft_atoi_strict(const char *str)
 {
-	int		neg;
-	size_t	num;
-	size_t	temp_num;
-	long	cnt;
+	int					neg;
+	int					num;
+	unsigned long long	temp_num;
 
 	if (*str == '\0')
 		ft_pstr_exit("Error\n");
@@ -15,20 +26,16 @@ static int	ft_atoi_strict(const char *str)
 	if (*str == '+' || *str == '-')
 		str++;
 	num = 0;
-	cnt = INT_MAX;
 	while ('0' <= *str && *str <= '9')
 	{
-		temp_num =  num * 10 + (*str - '0');
-		if (neg == -1 && (cnt == 0 || temp_num > -(size_t)INT_MIN))
+		temp_num = num * 10 + (*str - '0');
+		if (neg == -1 && temp_num > -(size_t)INT_MIN)
 			ft_pstr_exit("Error\n");
-		if (neg == 1 && (cnt == 0 || temp_num > (size_t)INT_MAX))
+		if (neg == 1 && temp_num > (size_t)INT_MAX)
 			ft_pstr_exit("Error\n");
 		num = temp_num;
-		cnt = cnt / 10;
 		str++;
 	}
-	if (*str != 0)
-		ft_pstr_exit("Error\n");
 	return (neg * num);
 }
 
@@ -57,7 +64,7 @@ static bool	is_unique_number(t_clist *plist, int num)
 
 static int	get_valid_number(t_clist *list, char *str)
 {
-	int num;
+	int	num;
 
 	num = ft_atoi_strict(str);
 	if (is_unique_number(list, num) == false)

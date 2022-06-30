@@ -14,10 +14,10 @@ SRCS	:= \
 				main.c \
 				get_valid_list.c \
 				get_ordered_arr.c \
-				partition_recursive_stack_a.c \
-				partition_recursive_stack_b.c \
-				sort_less_args.c \
-				test_func.c
+				partition_recur_stack_a.c \
+				partition_recur_stack_b.c \
+				sort_last_3_data.c \
+				sort_small_problem.c
 
 # SRCS_BONUS	:= \
 				main_bonus.c \
