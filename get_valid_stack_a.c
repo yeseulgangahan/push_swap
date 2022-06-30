@@ -6,7 +6,7 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 10:42:19 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 13:52:49 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/06/30 15:56:42 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_atoi_strict(const char *str)
 	unsigned long long	temp_num;
 
 	if (*str == '\0')
-		ft_pstr_exit("Error\n");
+		ft_pstr_exit("Error");
 	neg = 1;
 	if (*str == '-')
 		neg = -1;
@@ -30,14 +30,14 @@ static int	ft_atoi_strict(const char *str)
 	{
 		temp_num = num * 10 + (*str - '0');
 		if (neg == -1 && temp_num > -(unsigned long long)INT_MIN)
-			ft_pstr_exit("Error\n");
+			ft_pstr_exit("Error");
 		if (neg == 1 && temp_num > (unsigned long long)INT_MAX)
-			ft_pstr_exit("Error\n");
+			ft_pstr_exit("Error");
 		num = temp_num;
 		str++;
 	}
 	if (*str != '\0')
-		ft_pstr_exit("Error\n");
+		ft_pstr_exit("Error");
 	return (neg * num);
 }
 
@@ -70,7 +70,7 @@ static int	get_valid_number(t_clist *list, char *str)
 
 	num = ft_atoi_strict(str);
 	if (is_unique_number(list, num) == FALSE)
-		ft_pstr_exit("Error\n");
+		ft_pstr_exit("Error");
 	return (num);
 }
 

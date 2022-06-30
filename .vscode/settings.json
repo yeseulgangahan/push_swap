@@ -16,7 +16,10 @@
 		"vector": "c",
 		"stdlib.h": "c",
 		"type_traits": "c",
-		"stddef.h": "c"
+		"stddef.h": "c",
+		"push_swap_bonus.h": "c",
+		"get_next_line.h": "c",
+		"push_swap_operations_bonus.h": "c"
 	},
 	"C_Cpp.dimInactiveRegions": true
 }

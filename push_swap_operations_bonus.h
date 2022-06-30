@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_operations.h                             :+:      :+:    :+:   */
+/*   push_swap_operations_bonus.h                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:04:38 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 19:29:16 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/06/30 19:30:21 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 # include "./libft/include/push_swap_stack.h"
 
-void	sa(t_stack *pstack);
-void	sb(t_stack *pstack);
-void	ss(t_stack *pstack1, t_stack *pstack2);
-void	pa(t_stack *pstack1, t_stack *pstack2);
-void	pb(t_stack *pstack1, t_stack *pstack2);
-void	ra(t_stack *pstack);
-void	rb(t_stack *pstack);
-void	rr(t_stack *pstack1, t_stack *pstack2);
-void	rra(t_stack *pstack);
-void	rrb(t_stack *pstack);
-void	rrr(t_stack *pstack1, t_stack *pstack2);
+void	sa_silent(t_stack *pstack);
+void	sb_silent(t_stack *pstack);
+void	ss_silent(t_stack *pstack1, t_stack *pstack2);
+void	pa_silent(t_stack *pstack1, t_stack *pstack2);
+void	pb_silent(t_stack *pstack1, t_stack *pstack2);
+void	ra_silent(t_stack *pstack);
+void	rb_silent(t_stack *pstack);
+void	rr_silent(t_stack *pstack1, t_stack *pstack2);
+void	rra_silent(t_stack *pstack);
+void	rrb_silent(t_stack *pstack);
+void	rrr_silent(t_stack *pstack1, t_stack *pstack2);
 
 #endif

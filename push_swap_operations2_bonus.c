@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_stack.c                                  :+:      :+:    :+:   */
+/*   push_swap_operations2_bonus.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 11:06:07 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 13:35:16 by yehan            ###   ########seoul.kr  */
+/*   Created: 2022/06/30 11:03:43 by yehan             #+#    #+#             */
+/*   Updated: 2022/06/30 19:00:30 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap_stack.h"
 #include "./libft/include/libft.h"
+#include "push_swap_operations_bonus.h"
 
-void	stack_init(t_stack *pstack)
+void	ra_silent(t_stack *pstack)
 {
-	pstack = ft_calloc(1, sizeof(t_stack));
-	clist_init(pstack);
+	stack_rotate(pstack, 1);
 }
 
-int	stack_count(t_stack *pstack)
+void	rb_silent(t_stack *pstack)
 {
-	return (clist_count(pstack));
+	stack_rotate(pstack, 1);
 }
 
-int	stack_peek(t_stack *pstack, t_data *pdata)
+void	rr_silent(t_stack *pstack1, t_stack *pstack2)
 {
-	return (clist_first(pstack, pdata));
+	stack_rotate(pstack1, 1);
+	stack_rotate(pstack2, 1);
 }
 
-int	stack_next(t_stack *pstack, t_data *pdata)
+void	rra_silent(t_stack *pstack)
 {
-	return (clist_next(pstack, pdata));
+	stack_rotate(pstack, stack_count(pstack) - 1);
+}
+
+void	rrb_silent(t_stack *pstack)
+{
+	stack_rotate(pstack, stack_count(pstack) - 1);
 }

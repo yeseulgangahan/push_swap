@@ -6,7 +6,7 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 10:49:18 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 13:36:19 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/06/30 16:05:38 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static size_t	partition(t_pushswap *pushswap,
 		}
 		else
 		{
-			if (is_rb_data_only(pushswap, pivot1, len - 1) == true)
+			if (is_rb_data_only(pushswap, pivot1, len - 1) == TRUE)
 				break ;
 			rb(pushswap->stack_b);
 			rb_cnt++;
@@ -99,7 +99,7 @@ void	partition_recur_stack_b(t_pushswap *pushswap, size_t left, size_t right)
 	size_t	rb_cnt;
 
 	len = right - left + 1;
-	if (stack_is_descending_order(pushswap->stack_b, len) == true)
+	if (stack_is_descending_order(pushswap->stack_b, len) == TRUE)
 	{
 		while (len--)
 			pa(pushswap->stack_b, pushswap->stack_a);
