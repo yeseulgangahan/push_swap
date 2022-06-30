@@ -1,15 +1,6 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/yehan/push_swap'
-cc -Wall -Wextra -Werror -g   -c -o main.o main.c
-cc -Wall -Wextra -Werror -g   -c -o get_valid_list.o get_valid_list.c
- 
-cc -Wall -Wextra -Werror -g   -c -o get_ordered_arr.o get_ordered_arr.c
-cc -Wall -Wextra -Werror -g   -c -o partition_recur_stack_a.o partition_recur_stack_a.c
-cc -Wall -Wextra -Werror -g   -c -o partition_recur_stack_b.o partition_recur_stack_b.c
- 
-cc -Wall -Wextra -Werror -g   -c -o sort_last_3_data.o sort_last_3_data.c
-cc -Wall -Wextra -Werror -g   -c -o sort_small_problem.o sort_small_problem.c
 make --directory=./libft
-cc -Wall -Wextra -Werror -g -L./libft -lft push_swap_stack.o push_swap_operations.o main.o get_valid_list.o get_ordered_arr.o partition_recur_stack_a.o partition_recur_stack_b.o sort_last_3_data.o sort_small_problem.o -o push_swap
+cc -Wall -Wextra -Werror -g -L./libft -lft push_swap_stack.o push_swap_stack2.o push_swap_operations.o push_swap_operations2.o main.o get_valid_list.o get_ordered_arr.o sort_small_problem.o partition_recur_stack_a.o partition_recur_stack_b.o sort_last_3_data.o sort_last_3_data2.o -o push_swap
 make: Leaving directory `/Users/yehan/push_swap'
  

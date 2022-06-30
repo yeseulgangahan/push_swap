@@ -15,7 +15,8 @@
 		"string_view": "c",
 		"vector": "c",
 		"stdlib.h": "c",
-		"type_traits": "c"
+		"type_traits": "c",
+		"stddef.h": "c"
 	},
 	"C_Cpp.dimInactiveRegions": true
 }

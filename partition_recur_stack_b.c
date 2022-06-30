@@ -6,7 +6,7 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 10:49:18 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 11:01:06 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/06/30 13:36:19 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	base_case_solve(t_pushswap *pushswap, size_t len)
 		sort_last_3_data(pushswap);
 }
 
-static bool	is_rb_data_only(t_pushswap *pushswap, size_t pivot1, size_t range)
+static int	is_rb_data_only(t_pushswap *pushswap, size_t pivot1, size_t range)
 {
 	t_data	data;
 
@@ -36,9 +36,9 @@ static bool	is_rb_data_only(t_pushswap *pushswap, size_t pivot1, size_t range)
 		range--;
 	}
 	if (range == 0)
-		return (true);
+		return (TRUE);
 	else
-		return (false);
+		return (FALSE);
 }
 
 static size_t	partition(t_pushswap *pushswap,

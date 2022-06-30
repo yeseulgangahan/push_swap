@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/06/30 13:36:36 by yehan             #+#    #+#              #
+#    Updated: 2022/06/30 13:36:38 by yehan            ###   ########seoul.kr   #
+#                                                                              #
+# **************************************************************************** #
+
 NAME		:= push_swap
 
 CC			:= cc
@@ -10,14 +22,17 @@ FTDIR		:= ./libft
 
 SRCS	:= \
 				push_swap_stack.c \
+				push_swap_stack2.c \
 				push_swap_operations.c \
+				push_swap_operations2.c \
 				main.c \
 				get_valid_list.c \
 				get_ordered_arr.c \
+				sort_small_problem.c \
 				partition_recur_stack_a.c \
 				partition_recur_stack_b.c \
 				sort_last_3_data.c \
-				sort_small_problem.c
+				sort_last_3_data2.c
 
 # SRCS_BONUS	:= \
 				main_bonus.c \

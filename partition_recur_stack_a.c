@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-static bool	is_ra_data_only(t_pushswap *pushswap, size_t pivot2, size_t range)
+static int	is_ra_data_only(t_pushswap *pushswap, size_t pivot2, size_t range)
 {
 	t_data	data;
 
@@ -24,9 +24,9 @@ static bool	is_ra_data_only(t_pushswap *pushswap, size_t pivot2, size_t range)
 		range--;
 	}
 	if (range == 0)
-		return (true);
+		return (TRUE);
 	else
-		return (false);
+		return (FALSE);
 }
 
 static void	partition_first(t_pushswap *pushswap,
@@ -39,7 +39,7 @@ static void	partition_first(t_pushswap *pushswap,
 		stack_peek(pushswap->stack_a, &data);
 		if (pushswap->ordered_arr[pivot2] <= data)
 		{
-			if (is_ra_data_only(pushswap, pivot2, len - 1) == true)
+			if (is_ra_data_only(pushswap, pivot2, len - 1) == TRUE)
 				break ;
 			ra(pushswap->stack_a);
 		}
@@ -52,7 +52,7 @@ static void	partition_first(t_pushswap *pushswap,
 		}
 		len--;
 	}
-	pushswap->is_initial = false;
+	pushswap->is_initial = FALSE;
 }
 
 static size_t	partition_next(t_pushswap *pushswap,
@@ -67,7 +67,7 @@ static size_t	partition_next(t_pushswap *pushswap,
 		stack_peek(pushswap->stack_a, &data);
 		if (pushswap->ordered_arr[pivot2] <= data)
 		{
-			if (is_ra_data_only(pushswap, pivot2, len - 1) == true)
+			if (is_ra_data_only(pushswap, pivot2, len - 1) == TRUE)
 				break ;
 			ra(pushswap->stack_a);
 			ra_cnt++;
@@ -113,7 +113,7 @@ void	partition_recur_stack_a(t_pushswap *pushswap, size_t left, size_t right)
 	size_t	ra_cnt;
 
 	len = right - left + 1;
-	if (stack_is_ascending_order(pushswap->stack_a, len) == true)
+	if (stack_is_ascending_order(pushswap->stack_a, len) == TRUE)
 		return ;
 	else if (len == 2)
 		sa(pushswap->stack_a);
@@ -121,7 +121,7 @@ void	partition_recur_stack_a(t_pushswap *pushswap, size_t left, size_t right)
 	{
 		pivot1 = left + (len / 3);
 		pivot2 = left + (len / 3 * 2);
-		if (pushswap->is_initial == true)
+		if (pushswap->is_initial == TRUE)
 			partition_first(pushswap, pivot1, pivot2, len);
 		else
 		{
