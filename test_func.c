@@ -28,4 +28,5 @@ void	test_print_stack_a(t_stack *pstack)
 		cur = cur->next;
 		i++;
 	}
+	printf("\n");
 }

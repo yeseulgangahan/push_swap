@@ -2,23 +2,23 @@
 
 static void	sort_3_args(t_stack *pstack)
 {
-	t_data	a1;
-	t_data	a2;
-	t_data	a3;
+	t_data	d1;
+	t_data	d2;
+	t_data	d3;
 
-	a1 = pstack->tail->next->data;
-	a2 = pstack->tail->next->next->data;
-	a3 = pstack->tail->data;
-	if (a1 < a2 && a2 > a3 && a3 > a1)
+	d1 = pstack->tail->next->data;
+	d2 = pstack->tail->next->next->data;
+	d3 = pstack->tail->data;
+	if (d1 < d2 && d2 > d3 && d3 > d1)
 	{
 		sa(pstack);
 		ra(pstack);
 	}
-	else if (a1 > a2 && a2 < a3 && a3 > a1)
+	else if (d1 > d2 && d2 < d3 && d3 > d1)
 		sa(pstack);
-	else if (a1 < a2 && a2 > a3 && a3 < a1)
+	else if (d1 < d2 && d2 > d3 && d3 < d1)
 		rra(pstack);
-	else if (a1 > a2 && a2 < a3 && a3 < a1)
+	else if (d1 > d2 && d2 < d3 && d3 < d1)
 		ra(pstack);
 	else
 	{
@@ -27,7 +27,7 @@ static void	sort_3_args(t_stack *pstack)
 	}
 }
 
-static void	min_data_to_top(t_stack *pstack, size_t len, size_t index)
+static void	move_min_data_to_top(t_stack *pstack, size_t len, size_t index)
 {
 	size_t	i;
 
@@ -66,7 +66,7 @@ static void	min_data_pop(t_pushswap *pushswap, size_t len, size_t index)
 			clist_next(pushswap->stack_a, &data);
 			if (target_data == data)
 			{
-				min_data_to_top(pushswap->stack_a, len, i);
+				move_min_data_to_top(pushswap->stack_a, len, i);
 				break ;
 			}
 			i++;

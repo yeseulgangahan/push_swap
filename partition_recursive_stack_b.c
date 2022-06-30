@@ -2,21 +2,92 @@
 
 /* partition_recursive_stack_b */
 
-static void	base_case_solve(t_pushswap *pushswap, size_t len)
+static void	sort_123(t_pushswap *pushswap)
 {
-	size_t	i;
-
-	if (len == 2)
-		sb(pushswap->stack_b);
-	i = 0;
-	while (i < len)
-	{
-		pa(pushswap->stack_b, pushswap->stack_a);
-		i++;
-	}
+	sb(pushswap->stack_b);
+	pa(pushswap->stack_b, pushswap->stack_a);
+	sb(pushswap->stack_b);
+	pa(pushswap->stack_b, pushswap->stack_a);
+	sa(pushswap->stack_a);
+	pa(pushswap->stack_b, pushswap->stack_a);
+}
+static void	sort_132(t_pushswap *pushswap)
+{
+	sb(pushswap->stack_b);
+	pa(pushswap->stack_b, pushswap->stack_a);
+	sb(pushswap->stack_b);
+	pa(pushswap->stack_b, pushswap->stack_a);
+	pa(pushswap->stack_b, pushswap->stack_a);
 }
 
-static bool	is_rb_needed(t_pushswap *pushswap, size_t pivot1, size_t range)
+static void	sort_213(t_pushswap *pushswap)
+{
+	pa(pushswap->stack_b, pushswap->stack_a);
+	sb(pushswap->stack_b);
+	pa(pushswap->stack_b, pushswap->stack_a);
+	sa(pushswap->stack_a);
+	pa(pushswap->stack_b, pushswap->stack_a);
+}
+
+static void	sort_231(t_pushswap *pushswap)
+{
+	pa(pushswap->stack_b, pushswap->stack_a);
+	pa(pushswap->stack_b, pushswap->stack_a);
+	sa(pushswap->stack_a);
+	pa(pushswap->stack_b, pushswap->stack_a);
+}
+
+static void	sort_312(t_pushswap *pushswap)
+{
+	pa(pushswap->stack_b, pushswap->stack_a);
+	sb(pushswap->stack_b);
+	pa(pushswap->stack_b, pushswap->stack_a);
+	pa(pushswap->stack_b, pushswap->stack_a);
+}
+
+void	sort_last_3_args(t_pushswap *pushswap)
+{
+	// ft_putstr_fd("sort_last_3 enter\n", 1);
+	// test_print_stack_a(pushswap->stack_a); //
+	// test_print_stack_a(pushswap->stack_b); //
+
+
+	t_data	d1;
+	t_data	d2;
+	t_data	d3;
+
+	d1 = pushswap->stack_b->tail->next->data;
+	d2 = pushswap->stack_b->tail->next->next->data;
+	d3 = pushswap->stack_b->tail->next->next->next->data;
+	if (d1 < d2 && d2 < d3 && d1 < d3)
+		sort_123(pushswap);
+	else if (d1 < d2 && d2 > d3 && d1 < d3)
+		sort_132(pushswap);
+	else if (d1 > d2 && d2 < d3 && d1 < d3)
+		sort_213(pushswap);
+	else if (d1 < d2 && d2 > d3 && d1 > d3)
+		sort_231(pushswap);
+	else if (d1 > d2 && d2 < d3 && d1 > d3)
+		sort_312(pushswap);
+	// test_print_stack_a(pushswap->stack_a); //
+	// test_print_stack_a(pushswap->stack_b); //
+	// ft_putstr_fd("sort_last_3 out\n", 1);
+	
+}
+
+static void	base_case_solve(t_pushswap *pushswap, size_t len)
+{
+	if (len == 2)
+	{
+		sb(pushswap->stack_b);
+		pa(pushswap->stack_b, pushswap->stack_a);
+		pa(pushswap->stack_b, pushswap->stack_a);
+	}
+	else if (len == 3)
+		sort_last_3_args(pushswap);
+}
+
+static bool	is_rb_data_only(t_pushswap *pushswap, size_t pivot1, size_t range)
 {
 	t_data	data;
 
@@ -28,9 +99,9 @@ static bool	is_rb_needed(t_pushswap *pushswap, size_t pivot1, size_t range)
 		range--;
 	}
 	if (range == 0)
-		return (false);
-	else
 		return (true);
+	else
+		return (false);
 }
 
 static size_t	partition(t_pushswap *pushswap, size_t pivot1, size_t pivot2, size_t len)
@@ -51,7 +122,7 @@ static size_t	partition(t_pushswap *pushswap, size_t pivot1, size_t pivot2, size
 		}
 		else
 		{
-			if (is_rb_needed(pushswap, pivot1, len - 1) == false)
+			if (is_rb_data_only(pushswap, pivot1, len - 1) == true)
 				break ;
 			rb(pushswap->stack_b);
 			rb_cnt++;
@@ -98,7 +169,7 @@ void	partition_recursive_stack_b(t_pushswap *pushswap, size_t left, size_t right
 			len--;
 		}
 	}
-	else if (len <= 2)
+	else if (len == 2 || len == 3)
 		base_case_solve(pushswap, len);
 	else
 	{
