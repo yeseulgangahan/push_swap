@@ -6,7 +6,7 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 18:56:21 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 19:22:21 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/07/01 14:18:24 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,8 @@ static void	get_next_operations(t_pushswap *pushswap)
 static void	pushswap_init(t_pushswap *pushswap, char **args)
 {
 	pushswap->stack_a = ft_calloc(1, sizeof(t_stack));
-	stack_init(pushswap->stack_a);
 	get_valid_stack_a_bonus(pushswap->stack_a, args);
 	pushswap->stack_b = ft_calloc(1, sizeof(t_stack));
-	stack_init(pushswap->stack_b);
 }
 
 int	main(int argc, char **argv)
