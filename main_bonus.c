@@ -6,7 +6,7 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 18:56:21 by yehan             #+#    #+#             */
-/*   Updated: 2022/07/01 14:18:24 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/07/03 07:11:34 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,5 @@ int	main(int argc, char **argv)
 		else
 			ft_putstr_fd("KO", 1);
 	}
+	exit(0);
 }

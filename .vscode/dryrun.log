@@ -8,8 +8,8 @@ cc -Wall -Wextra -Werror -g   -c -o main.o main.c
 cc -Wall -Wextra -Werror -g   -c -o get_valid_stack_a.o get_valid_stack_a.c
 cc -Wall -Wextra -Werror -g   -c -o get_ordered_arr.o get_ordered_arr.c
 cc -Wall -Wextra -Werror -g   -c -o sort_small_problem.o sort_small_problem.c
-cc -Wall -Wextra -Werror -g   -c -o partition_recur_stack_a.o partition_recur_stack_a.c
  
+cc -Wall -Wextra -Werror -g   -c -o partition_recur_stack_a.o partition_recur_stack_a.c
 cc -Wall -Wextra -Werror -g   -c -o partition_recur_stack_b.o partition_recur_stack_b.c
 cc -Wall -Wextra -Werror -g   -c -o sort_last_3_data.o sort_last_3_data.c
 cc -Wall -Wextra -Werror -g   -c -o sort_last_3_data2.o sort_last_3_data2.c

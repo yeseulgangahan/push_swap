@@ -6,7 +6,7 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 10:34:01 by yehan             #+#    #+#             */
-/*   Updated: 2022/07/01 14:18:28 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/07/03 07:10:07 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ int	main(int argc, char **argv)
 				partition_recur_stack_a(&pushswap, 0, len - 1);
 		}
 	}
-	return (0);
+	exit(0);
 }
