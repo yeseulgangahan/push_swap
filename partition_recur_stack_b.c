@@ -6,23 +6,11 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 10:49:18 by yehan             #+#    #+#             */
-/*   Updated: 2022/06/30 16:05:38 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/07/03 07:47:57 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-static void	base_case_solve(t_pushswap *pushswap, size_t len)
-{
-	if (len == 2)
-	{
-		sb(pushswap->stack_b);
-		pa(pushswap->stack_b, pushswap->stack_a);
-		pa(pushswap->stack_b, pushswap->stack_a);
-	}
-	else if (len == 3)
-		sort_last_3_data(pushswap);
-}
 
 static int	is_rb_data_only(t_pushswap *pushswap, size_t pivot1, size_t range)
 {
@@ -105,7 +93,7 @@ void	partition_recur_stack_b(t_pushswap *pushswap, size_t left, size_t right)
 			pa(pushswap->stack_b, pushswap->stack_a);
 	}
 	else if (len == 2 || len == 3)
-		base_case_solve(pushswap, len);
+		base_case_solve_stack_b(pushswap, len);
 	else
 	{
 		pivot1 = left + (len / 3);

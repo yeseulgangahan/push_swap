@@ -6,7 +6,7 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 11:09:32 by yehan             #+#    #+#             */
-/*   Updated: 2022/07/03 07:11:46 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/07/03 08:14:39 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,19 @@ void	partition_recur_stack_a(t_pushswap *pushswap,
 void	partition_recur_stack_b(t_pushswap *pushswap,
 			size_t left, size_t right);
 
-void	sort_last_3_data(t_pushswap *pushswap);
-void	sort_123(t_pushswap *pushswap);
-void	sort_132(t_pushswap *pushswap);
-void	sort_213(t_pushswap *pushswap);
-void	sort_231(t_pushswap *pushswap);
-void	sort_312(t_pushswap *pushswap);
+void	base_case_solve_stack_a(t_pushswap *pushswap, size_t len);
+void	sort_321_stack_a(t_pushswap *pushswap);
+void	sort_132_stack_a(t_pushswap *pushswap);
+void	sort_213_stack_a(t_pushswap *pushswap);
+void	sort_231_stack_a(t_pushswap *pushswap);
+void	sort_312_stack_a(t_pushswap *pushswap);
+
+void	base_case_solve_stack_b(t_pushswap *pushswap, size_t len);
+void	sort_123_stack_b(t_pushswap *pushswap);
+void	sort_132_stack_b(t_pushswap *pushswap);
+void	sort_213_stack_b(t_pushswap *pushswap);
+void	sort_231_stack_b(t_pushswap *pushswap);
+void	sort_312_stack_b(t_pushswap *pushswap);
 
 void	sort_small_problem(t_pushswap *pushswap, size_t len);
 

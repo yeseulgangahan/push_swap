@@ -115,8 +115,8 @@ void	partition_recur_stack_a(t_pushswap *pushswap, size_t left, size_t right)
 	len = right - left + 1;
 	if (stack_is_ascending_order(pushswap->stack_a, len) == TRUE)
 		return ;
-	else if (len == 2)
-		sa(pushswap->stack_a);
+	else if (len == 2 || len == 3)
+		base_case_solve_stack_a(pushswap, len);
 	else
 	{
 		pivot1 = left + (len / 3);

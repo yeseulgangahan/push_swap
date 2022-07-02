@@ -6,7 +6,7 @@
 #    By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 13:36:36 by yehan             #+#    #+#              #
-#    Updated: 2022/06/30 19:28:59 by yehan            ###   ########seoul.kr   #
+#    Updated: 2022/07/03 08:15:58 by yehan            ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,8 +31,10 @@ SRCS	:= \
 				sort_small_problem.c \
 				partition_recur_stack_a.c \
 				partition_recur_stack_b.c \
-				sort_last_3_data.c \
-				sort_last_3_data2.c
+				base_case_solve_stack_a.c \
+				base_case_solve_stack_a2.c \
+				base_case_solve_stack_b.c \
+				base_case_solve_stack_b2.c
 
 SRCS_BONUS	:= \
 				push_swap_operations_bonus.c \
