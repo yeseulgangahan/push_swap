@@ -11,7 +11,7 @@ make: ***
 No rule to make target `push_swap_operations.o', needed by `push_swap'.  Stop.
 
 
-# Make data base, printed on Sun Jul  3 06:49:37 2022
+# Make data base, printed on Thu Jul  7 06:48:11 2022
 
 # Variables
 
@@ -19,7 +19,7 @@ No rule to make target `push_swap_operations.o', needed by `push_swap'.  Stop.
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# makefile (from `Makefile', line 37)
+# makefile (from `Makefile', line 39)
 SRCS_BONUS := push_swap_operations_bonus.c push_swap_operations2_bonus.c push_swap_operations3_bonus.c main_bonus.c get_valid_stack_a_bonus.c
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
@@ -48,11 +48,11 @@ VSCODE_NODE_CACHED_DATA_DIR = /Users/yehan/Library/Application Support/Code/Cach
 # environment
 VERBOSE_LOGGING = true
 # environment
-VSCODE_LOGS = /Users/yehan/Library/Application Support/Code/logs/20220703T064933
-# makefile (from `Makefile', line 44)
+VSCODE_LOGS = /Users/yehan/Library/Application Support/Code/logs/20220707T064801
+# makefile (from `Makefile', line 46)
 OBJS = $(SRCS:.c=.o)
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cm_800352k/T/vscode-ipc-ae5126fe-541b-467b-b456-cf848fae0627.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cm_800352k/T/vscode-ipc-1f89b8f0-dcc3-4b7b-b672-c20d062257e0.sock
 # environment
 PATH = /Users/yehan/.brew/bin:/Users/yehan/.brew/bin:/Users/yehan/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # environment
@@ -60,18 +60,20 @@ LSCOLORS = Gxfxcxdxbxegedabagacad
 # makefile (from `Makefile', line 20)
 LIBFLAGS := -L./libft -lft
 # environment
+LaunchInstanceID = 98ED2030-1FB7-477F-820B-12AF634CF3F8
+# environment
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.yaMybxgoOF/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.8Yu7lDgEwI/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
 PWD = /Users/yehan/push_swap
-# makefile (from `Makefile', line 45)
+# makefile (from `Makefile', line 47)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 # environment
 HOME = /Users/yehan
@@ -94,7 +96,7 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # makefile (from `Makefile', line 24)
-SRCS := push_swap_operations.c push_swap_operations2.c push_swap_operations3.c main.c get_valid_stack_a.c get_ordered_arr.c sort_small_problem.c partition_recur_stack_a.c partition_recur_stack_b.c sort_last_3_data.c sort_last_3_data2.c
+SRCS := push_swap_operations.c push_swap_operations2.c push_swap_operations3.c main.c get_valid_stack_a.c get_ordered_arr.c sort_small_problem.c quick_sort_stack_a.c quick_sort_stack_b.c base_case_solve_stack_a.c base_case_solve_stack_a2.c base_case_solve_stack_b.c base_case_solve_stack_b2.c
 # environment
 SHLVL = 1
 # makefile (from `Makefile', line 16)
@@ -132,7 +134,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.2156
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x1000000d.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -141,6 +143,8 @@ XPC_SERVICE_NAME = com.microsoft.VSCode.2156
 FTDIR := ./libft
 # environment
 __CF_USER_TEXT_ENCODING = 0x19452:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
@@ -149,6 +153,8 @@ MAKEFILES :=
 PAGER = less
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186db
 # automatic
 ^F = $(notdir $^)
 # default
@@ -160,9 +166,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 30449
+VSCODE_PID = 69801
 # variable set hash-table stats:
-# Load=73/1024=7%, Rehash=0, Collisions=4/105=4%
+# Load=76/1024=7%, Rehash=0, Collisions=4/108=4%
 
 # Pattern-specific Variable Values
 
@@ -170,15 +176,21 @@ VSCODE_PID = 30449
 
 # Directories
 
-# . (device 16777225, inode 2532879): 29 files, no impossibilities.
+# . (device 16777225, inode 2532879): 30 files, no impossibilities.
 
-# 29 files, no impossibilities in 1 directories.
+# 30 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
+
+# Not a target:
+base_case_solve_stack_b.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 push_swap_operations_bonus.o:
@@ -195,12 +207,6 @@ all: push_swap
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-# Not a target:
-partition_recur_stack_a.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 .PHONY: all clean fclean rclean re bonus
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -213,13 +219,13 @@ get_valid_stack_a_bonus.o:
 #  File has not been updated.
 
 # Not a target:
-push_swap_operations3.o:
+base_case_solve_stack_a2.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-sort_last_3_data.o:
+push_swap_operations3.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -233,17 +239,11 @@ sort_last_3_data.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-01 13:02:46
+#  Last modified 2022-07-06 12:40:28
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-partition_recur_stack_b.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
 
 # Not a target:
 push_swap_operations.o:
@@ -252,6 +252,12 @@ push_swap_operations.o:
 #  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+base_case_solve_stack_b2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 get_valid_stack_a.o:
@@ -270,7 +276,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 58):
+#  commands to execute (from `Makefile', line 60):
 	make fclean --directory=$(FTDIR)
 	$(RM) $(NAME) $(NAME_BONUS)
 	
@@ -306,22 +312,22 @@ sort_small_problem.o:
 #  File has not been updated.
 
 # Not a target:
-sort_last_3_data2.o:
+quick_sort_stack_a.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 checker: push_swap_operations_bonus.o push_swap_operations2_bonus.o push_swap_operations3_bonus.o main_bonus.o get_valid_stack_a_bonus.o
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 68):
+#  commands to execute (from `Makefile', line 70):
 	make --directory=$(FTDIR)
 	$(CC) $(CFLAGS) $(LIBFLAGS) $^ -o $@
 	
 
 re: fclean all
- 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -332,18 +338,18 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 54):
+#  commands to execute (from `Makefile', line 56):
 	make clean --directory=$(FTDIR)
 	$(RM) $(OBJS) $(OBJS_BONUS)
 	
 
-push_swap: push_swap_operations.o push_swap_operations2.o push_swap_operations3.o main.o get_valid_stack_a.o get_ordered_arr.o sort_small_problem.o partition_recur_stack_a.o partition_recur_stack_b.o sort_last_3_data.o sort_last_3_data2.o
+push_swap: push_swap_operations.o push_swap_operations2.o push_swap_operations3.o main.o get_valid_stack_a.o get_ordered_arr.o sort_small_problem.o quick_sort_stack_a.o quick_sort_stack_b.o base_case_solve_stack_a.o base_case_solve_stack_a2.o base_case_solve_stack_b.o base_case_solve_stack_b2.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 64):
+#  commands to execute (from `Makefile', line 66):
 	make --directory=$(FTDIR)
 	$(CC) $(CFLAGS) $(LIBFLAGS) $^ -o $@
 	
@@ -361,7 +367,19 @@ get_ordered_arr.o:
 #  File has not been updated.
 
 # Not a target:
+quick_sort_stack_b.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+base_case_solve_stack_a.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -373,7 +391,7 @@ push_swap_operations3_bonus.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=28/1024=3%, Rehash=0, Collisions=0/68=0%
+# Load=30/1024=3%, Rehash=0, Collisions=0/72=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -385,6 +403,6 @@ push_swap_operations3_bonus.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun Jul  3 06:49:37 2022
+# Finished Make data base on Thu Jul  7 06:48:11 2022
 
  
