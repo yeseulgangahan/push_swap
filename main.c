@@ -6,7 +6,7 @@
 /*   By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 10:34:01 by yehan             #+#    #+#             */
-/*   Updated: 2022/07/06 12:18:38 by yehan            ###   ########seoul.kr  */
+/*   Updated: 2022/07/06 12:40:43 by yehan            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(int argc, char **argv)
 			if (len <= 5)
 				sort_small_problem(&pushswap, len);
 			else
-				partition_recur_stack_a(&pushswap, 0, len - 1);
+				quick_sort_stack_a(&pushswap, 0, len - 1);
 		}
 	}
 	exit(0);

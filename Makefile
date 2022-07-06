@@ -6,7 +6,7 @@
 #    By: yehan <yehan@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 13:36:36 by yehan             #+#    #+#              #
-#    Updated: 2022/07/03 08:15:58 by yehan            ###   ########seoul.kr   #
+#    Updated: 2022/07/06 12:40:28 by yehan            ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,8 @@ SRCS	:= \
 				get_valid_stack_a.c \
 				get_ordered_arr.c \
 				sort_small_problem.c \
-				partition_recur_stack_a.c \
-				partition_recur_stack_b.c \
+				quick_sort_stack_a.c \
+				quick_sort_stack_b.c \
 				base_case_solve_stack_a.c \
 				base_case_solve_stack_a2.c \
 				base_case_solve_stack_b.c \
