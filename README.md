@@ -1,10 +1,10 @@
 # push_swap
-최소한의 명령어를 이용하여 정수를 정렬하는 프로그램
+주어진 자료구조 상에서 정수를 정렬하는 가장 빠른 방법을 묻는 알고리즘 문제에 대한 해답입니다. 가장 많이 사용되는 빠른정렬(Quick Sort) 알고리즘을 이용하여 사용자가 입력한 정수 목록을 정렬합니다.
 
 ## Preview
 
 ## Given Problem
-아래에 주어진 명령어만을 이용할 수 있는 특정 자료구조를 이용하여 정렬해야 합니다.
+다음의 명령어만을 사용할 수 있는 자료구조를 이용해서 정수를 정렬해야 합니다.
 <img width="542" alt="image" src="https://github.com/yeseulgangahan/push_swap/assets/88709878/e4b83687-9f9d-4856-af8a-3cb8dbd89ddc">
 
 ## Features
